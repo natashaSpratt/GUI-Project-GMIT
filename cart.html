@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
   <head>
   <style>
@@ -23,7 +23,7 @@
   </head>
   <body>
 
-
+<!-- Bootstrap Container for the cart-->
 <div class="container">
     <div class="row">
         <div class="col-md-4">
@@ -46,7 +46,7 @@
                 </div>
                 <div class="space-ten"></div>
                 <div class="btn-ground text-center">
-                    <button type="button" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Add To Cart</button>
+                    <button type="button" class="btn btn-primary" onclick="setInformation()"><i class="fa fa-shopping-cart"></i> Add To Cart</button>
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><i class="fa fa-search"></i> Quick View</button>
                 </div>
                 <div class="space-ten"></div>
@@ -152,18 +152,18 @@
                             </div>
                             <!-- end col -->
                             <div class="col-md-4 col-sm-12">
-                                <select class="form-control" name="select">
+                                <select class="form-control" name="select" id= "test">
                                     <option value="" selected="">QTY</option>
-                                    <option value="">1</option>
-                                    <option value="">2</option>
-                                    <option value="">3</option>
+                                    <option value="1" id="checkBox1">1</option>
+                                    <option value="2" id="checkBox1" >2</option>
+                                    <option value="3" id="checkBox1" >3</option>
                                 </select>
                             </div>
                             <!-- end col -->
                         </div>
                         <div class="space-ten"></div>
                         <div class="btn-ground">
-                            <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart</button>
+                            <button type="button" class="btn btn-primary"onclick="setInformationQuanty()" > <span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart</button>
                             <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-heart"></span> Add To Wishlist</button>
                         </div>
                     </div>
@@ -179,3 +179,25 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>
 </html>
+
+<script>
+<!-- Calculation and prices addted to to the local storage -->
+let calculation = 0;
+let quantity = 0;
+let price = 340;
+localStorage.custTotalWatches = 0;
+function setInformation(){
+    quantity = 1;
+	calculation = quantity * price;
+	localStorage.custTotalWatches = calculation.toFixed(2);
+}
+function setInformationQuanty(){
+	quantity = document.getElementById('test').selectedOptions[0].value;
+	calculation = quantity * price;
+	localStorage.custTotalWatches = calculation.toFixed(2);
+
+	
+}
+
+
+</script>

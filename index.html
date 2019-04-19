@@ -41,9 +41,12 @@
         </li>
       </ul>
 
-
-      <!--Login button -->
-      <button type="button my-4 my-lg-0" class="btn btn-primary" data-toggle = "modal" data-target = "#loginModal"><i class="fas fa-unlock"></i>    Login</button>
+	  <div>
+		  <!--Login button -->
+		  <button type="button my-4 my-lg-0" class="btn btn-primary" data-toggle = "modal" data-target = "#loginModal"><i class="fas fa-unlock"></i>    Login</button>
+		  <!--Register button -->
+		  <button type="button my-4 my-lg-0" class="btn btn-primary " data-toggle = "modal" data-target = "#registerModal"><i class="fas fa-unlock"></i>    Register</button>
+	  </div>
       <!-- Modal for login button-->
       <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -58,21 +61,87 @@
               <center>
                 <!-- Login Form  -->
                 <!-- Needs Work  -->
-                 <form>
-                   Email<input type="text" id="login" name="login" placeholder="login">
-                   <br>
-                   Password<input type="text" id="password"name="login" placeholder="password">
+				 <div class="form-group row">
+					<label for="email_address" class="col-md-4 col-form-label text-md-right">E-Mail Address</label>
+					<div class="col-md-6">
+						<input type="text" id="inputEmail" class="form-control" name="email-address" required autofocus>
+					</div>
+				</div>
 
-                 </form>
-              </center>
-            </div>
+				<div class="form-group row">
+					<label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
+					<div class="col-md-6">
+						<input type="password" id="inputPassword" class="form-control" name="password" required>
+					</div>
+				</div>
             <div class="modal-footer">
                 <!-- Button or input for login -->
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Exit</button>
-               <input type="submit" value="Log In">
-              <button type="submit" class="btn btn-primary">Login</button>
+               <input type="submit" value="Register">
+              <button type="submit" id="checker" class="btn btn-primary">Login</button>
             </div>
-          </div>
+          </div>			  
+        </div>
+      </div>
+    </div>
+	 <!-- Modal for register button-->
+      <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="loginModalLabel"><b>Login</b></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="container">
+        <div class="row centered-form">
+     
+        	<div class="panel panel-default">
+        		<div class="panel-heading">
+			    		<h3 class="panel-title">Please fill all of the fields</h3>
+			 			</div>
+			 			<div class="panel-body">
+			    		<form role="form">
+			    			<div class="row">
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			                <input type="text" name="first_name" id="first_name" class="form-control input-sm" placeholder="First Name">
+			    					</div>
+			    				</div>
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			    						<input type="text" name="last_name" id="last_name" class="form-control input-sm" placeholder="Last Name">
+			    					</div>
+			    				</div>
+			    			</div>
+
+			    			<div class="form-group">
+			    				<input type="email" name="email" id="email" class="form-control input-sm" placeholder="Email Address">
+			    			</div>
+
+			    			<div class="row">
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			    						<input type="password" name="password" id="password" class="form-control input-sm" placeholder="Password">
+			    					</div>
+			    				</div>
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			    						<input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-sm" placeholder="Confirm Password">
+			    					</div>
+			    				</div>
+			    			</div>
+			    			
+			    			<input type="submit" value="Register" id ="addder" class="btn btn-info btn-block">
+			    		
+			    		</form>
+			    	</div>
+	    		</div>
+    		
+    	</div>
+    </div>
+          </div>			  
         </div>
       </div>
     </div>
@@ -140,3 +209,71 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
+<script>
+<!-- Register array creation and button for event listener -->
+let account = [];
+const registerButton = document.getElementById("addder");
+
+<!-- Loggin details validation button for event listner and function for to check if the details match the database-->
+const button = document.getElementById("checker");
+
+button.addEventListener("click", function() { //event listener when its clicked to activate the function
+    var email = document.getElementById('inputEmail').value;
+    var password = document.getElementById('inputPassword').value;
+	var found = false;
+
+    var entriesJSON = localStorage.getItem('account');// copy the data from local storage that was stored in account 
+    if (!entriesJSON) { //if there is no data output and error
+        alert("Nothing stored!");
+        return;
+    }
+    var allEntries = JSON.parse(entriesJSON);
+    for (var i = 0; i < allEntries.length; i++) {// loop to validate username and password from the account table
+        var entry = allEntries[i];
+        var storedUserName = entry.email;
+        var storedPassWord = entry.password;
+        var storedEmailAddress = entry.email;
+		
+		if (email == storedUserName && password == storedPassWord) { //checking if the username that was typed match the information stored in the account
+            alert("Successfully logged in!");
+            return;
+			found = true;
+        }
+		else {
+			found = false; // if its not a match it will set the boolean to false so we can output it as an error later
+		} 
+	}
+	if(found == false){// if the match wasn't succsessfull it will output and error to try again
+	alert('Invalid Username or Password! Please try again.');
+	}
+})
+
+
+registerButton.addEventListener("click", function() {
+	 // Parse any JSON previously stored in allEntries
+    let existingEntries = JSON.parse(localStorage.getItem("account"));
+    if(existingEntries == null) existingEntries = [];
+	let firstName = document.getElementById("first_name");
+	let lastName = document.getElementById("last_name");
+	let userEmail = document.getElementById("email");
+	let userPassword = document.getElementById("password");
+    let entry = {
+        fName: firstName.value,
+		lName: lastName.value,
+		email: userEmail.value,
+		password: userPassword.value
+    };
+	if (entry.fName === "" || entry.lName === ""  || entry.email === "" || entry.password === ""){
+	alert("Please fill up all the missing fields")
+	}
+	else{
+    localStorage.setItem("account", JSON.stringify(entry));
+    // Save allEntries back as an array of the object to local storage
+    existingEntries.push(entry);
+    localStorage.setItem("account", JSON.stringify(existingEntries));
+	alert("You have been successfully registred. You can Log in now. Thanks you!")
+	}
+	
+})
+
+</script>
