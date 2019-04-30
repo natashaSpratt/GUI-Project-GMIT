@@ -22,155 +22,295 @@
     <title></title>
   </head>
   <body>
-
-<!-- Bootstrap Container for the cart-->
-<div class="container">
-    <div class="row">
-        <div class="col-md-4">
-              <div class="thumbnail">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/41icfJZkElL.jpg" alt="" class="img-responsive myClass">
-                <div class="caption">
-                  <h4 class="pull-right">€59.99</h4>
-                  <h4><a href="#">Vape Product</a></h4>
-                  <p>blaa</p>
-                </div>
-                <div class="ratings">
-                  <p>
-                   <span class="fa fa-user"></span>
-                    <span class="fa fa-user"></span>
-                    <span class="fa fa-user"></span>
-                    <span class="fa fa-user"></span>
-                    <span class="fa fa-user"></span>
-                     (1222 reviews)
-                  </p>
-                </div>
-                <div class="space-ten"></div>
-                <div class="btn-ground text-center">
-                    <button type="button" class="btn btn-primary" onclick="setInformation()"><i class="fa fa-shopping-cart"></i> Add To Cart</button>
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><i class="fa fa-search"></i> Quick View</button>
-                </div>
-                <div class="space-ten"></div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="thumbnail">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/41icfJZkElL.jpg" alt="" class="img-responsive">
-                <div class="caption">
-                  <h4 class="pull-right">€59.99</h4>
-                  <h4><a href="#">Vape Product</a></h4>
-                  <p>Blaa</p>
-                </div>
-                <div class="ratings">
-                  <p>
-                    <span class="fa fa-user"></span>
-                    <span class="fa fa-user"></span>
-                    <span class="fa fa-user"></span>
-                    <span class="fa fa-user"></span>
-                    <span class="fa fa-user"></span>
-                     (152223 reviews)
-                  </p>
-                </div>
-                <div class="space-ten"></div>
-                <div class="btn-ground text-center">
-                    <button type="button" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Add To Cart</button>
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><i class="fa fa-search"></i> Quick View</button>
-                </div>
-                <div class="space-ten"></div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="thumbnail">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/41icfJZkElL.jpg" alt="" class="img-responsive">
-                <div class="caption">
-                  <h4 class="pull-right">€59.99</h4>
-                  <h4><a href=  "#">Vape PRoduct</a></h4>
-                  <p>bla</p>
-                </div>
-                <div class="ratings">
-                  <p>
-					<span class="fa fa-user"></span>
-                    <span class="fa fa-user"></span>
-                    <span class="fa fa-user"></span>
-                    <span class="fa fa-user"></span>
-                    <span class="fa fa-user"></span>
-                     (15222 reviews)
-                  </p>
-                </div>
-                <div class="space-ten"></div>
-                <div class="btn-ground text-center">
-                    <button type="button" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Add To Cart</button>
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><i class="fa fa-search"></i> Quick View</button>
-                </div>
-                <div class="space-ten"></div>
-              </div>
-            </div>
-    </div>
-</div>
-<div class="modal fade product_view" id="product_view">
-    <div class="modal-dialog">
-        <div class="modal-content">
+    <!-- Nav Bar  -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">Home Page</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Nav Bar Collapse menu -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <!-- Nav Bar  dropdown Menu for products -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Shop</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Clothing</a>
+            <a class="dropdown-item" href="#">Sports</a>
+            <a class="dropdown-item" href="#">Accessories</a>
+          </div>
+        </li>
+        <!--Navbar link to Cart -->
+        <li class="nav-item">
+          <a class="nav-link" href="cart.html"><i class="fas fa-shopping-basket"></i>   Cart</a>
+        </li>
+      </ul>
+	  <div>
+		  <!--Login button -->
+		  <button id="logInButton"type="button my-4 my-lg-0" class="btn btn-primary" data-toggle = "modal" data-target = "#loginModal"><i class="fas fa-unlock"></i>    Login</button>
+		  <!--Register button -->
+		  <button id="registerButton"type="button my-4 my-lg-0" class="btn btn-primary " data-toggle = "modal" data-target = "#registerModal"><i class="fas fa-unlock"></i>    Register</button>
+		  <!-- Profile Button-->
+		  <button id="profile"type="button my-4 my-lg-0" class="btn btn-primary " data-toggle = "modal" data-target = "#profileEditModal"><i class="fas fa-unlock"></i>    Profile</button>
+		  <!-- Log Out Button-->
+		  <button id="logOut"type="button my-4 my-lg-0" class="btn btn-primary"><i class="fas fa-unlock"></i>    LogOut</button>
+	  </div>
+      <!-- Modal for login button-->
+      <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
             <div class="modal-header">
-                <a href="#" data-dismiss="modal" class="class pull-right"><span class="glyphicon glyphicon-remove"></span></a>
-                <h3 class="modal-title">check</h3>
+              <h5 class="modal-title" id="loginModalLabel"><b>Login</b></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
             </div>
             <div class="modal-body">
-                <div class="row">
-                    <div class="col-md-6 product_img">
-                        <img src="https://images-na.ssl-images-amazon.com/images/I/41icfJZkElL.jpg" class="img-responsive">
-                    </div>
-                    <div class="col-md-6 product_content">
-                        <h4>Product Id: <span>bla</span></h4>
-                        <div class="rating">
-                            <span class="fa fa-user"></span>
-							<span class="fa fa-user"></span>
-							<span class="fa fa-user"></span>
-							<span class="fa fa-user"></span>
-							<span class="fa fa-user"></span>
-                           bla
-                        </div>
-                        <p>bla</p>
-                        <h3 class="cost"><span class="glyphicon glyphicon-usd"></span> 75.00 <small class="pre-cost"><span class="glyphicon glyphicon-usd"></span> 60.00</small></h3>
-                        <div class="row">
-                            <div class="col-md-4 col-sm-6 col-xs-12">
-                                <select class="form-control" name="select">
-                                    <option value="" selected="">bla</option>
-                                    <option value="black">bla</option>
-                                    <option value="white">bla</option>
-                                    <option value="gold">bla</option>
-                                    <option value="rose gold">bla bla</option>
-                                </select>
-                            </div>
-                            <!-- end col -->
-                            <div class="col-md-4 col-sm-6 col-xs-12">
-                                <select class="form-control" name="select">
-                                    <option value="">Capacity</option>
-                                    <option value="">bla</option>
-                                    <option value="">bla</option>
-                                    <option value="">bla</option>
-                                    <option value="">bla</option>
-                                </select>
-                            </div>
-                            <!-- end col -->
-                            <div class="col-md-4 col-sm-12">
-                                <select class="form-control" name="select" id= "test">
-                                    <option value="" selected="">QTY</option>
-                                    <option value="1" id="checkBox1">1</option>
-                                    <option value="2" id="checkBox1" >2</option>
-                                    <option value="3" id="checkBox1" >3</option>
-                                </select>
-                            </div>
-                            <!-- end col -->
-                        </div>
-                        <div class="space-ten"></div>
-                        <div class="btn-ground">
-                            <button type="button" class="btn btn-primary"onclick="setInformationQuanty()" > <span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart</button>
-                            <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-heart"></span> Add To Wishlist</button>
-                        </div>
-                    </div>
-                </div>
+              <center>
+                <!-- Login Form  -->
+                <!-- Needs Work  -->
+				 <div class="form-group row">
+					<label for="email_address" class="col-md-4 col-form-label text-md-right">E-Mail Address</label>
+					<div class="col-md-6">
+						<input type="text" id="inputEmail" class="form-control" name="email-address" required autofocus>
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
+					<div class="col-md-6">
+						<input type="password" id="inputPassword" class="form-control" name="password" required>
+					</div>
+				</div>
+            <div class="modal-footer">
+                <!-- Button or input for login -->
+               <input type="submit" value="Register">
+              <button type="submit" id="checker" class="btn btn-primary">Login</button>
             </div>
+          </div>
         </div>
+      </div>
     </div>
+	 <!-- Modal for register button-->
+      <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="loginModalLabel"><b>Welcome to Register menu.</b></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="container">
+        <div class="row centered-form">
+        	<div class="panel panel-default">
+        		<div class="panel-heading">
+			    		<h3 class="panel-title">Please fill up all of the fields</h3>
+			 			</div>
+			 			<div class="panel-body">
+			    		<form role="form">
+			    			<div class="row">
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			                <input type="text" name="first_name" id="first_name" class="form-control input-sm" placeholder="First Name">
+			    					</div>
+			    				</div>
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			    						<input type="text" name="last_name" id="last_name" class="form-control input-sm" placeholder="Last Name">
+			    					</div>
+			    				</div>
+			    			</div>
+			    			<div class="form-group">
+			    				<input type="email" name="email" id="email" class="form-control input-sm" placeholder="Email Address">
+			    			</div>
+
+			    			<div class="row">
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			    						<input type="password" name="password" id="password" class="form-control input-sm" placeholder="Password">
+			    					</div>
+			    				</div>
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			    						<input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-sm" placeholder="Confirm Password">
+			    					</div>
+			    				</div>
+			    			</div>
+
+			    			<input type="submit" value="Register" id ="addder" class="btn btn-info btn-block">
+
+			    		</form>
+			    	</div>
+	    		</div>
+
+    	</div>
+    </div>
+          </div>
+        </div>
+      </div>
+    </div>
+	<!-- Modal for register button-->
+      <div class="modal fade" id="profileEditModal" tabindex="-1" role="dialog" aria-labelledby="profileEditModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="loginModalLabel"><b>Welcome to Profile menu.</b></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="container">
+        <div class="row centered-form">
+        	<div class="panel panel-default">
+        		<div class="panel-heading">
+			    		<h3 class="panel-title">You can change all the field by filling it up and clicking the button edit</h3>
+			 			</div>
+			 			<div class="panel-body">
+			    		<form role="form">
+			    			<div class="row">
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			                <input type="text" name="first_name" id="firstName" class="form-control input-sm" placeholder="First Name">
+			    					</div>
+			    				</div>
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			    						<input type="text" name="last_name" id="lastName" class="form-control input-sm" placeholder="Last Name">
+			    					</div>
+			    				</div>
+			    			</div>
+
+			    			<div class="form-group">
+			    				<input type="email" name="email" id="userEmail" class="form-control input-sm" placeholder="Email Address">
+			    			</div>
+			    			<div class="row">
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			    						<input type="password" name="password" id="userPassword" class="form-control input-sm" placeholder="Password">
+			    					</div>
+			    				</div>
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			    						<input type="password" name="password_confirmation" id="newPassword" class="form-control input-sm" placeholder="New Password">
+			    					</div>
+			    				</div>
+			    			</div>
+			    			<input type="submit" value="Edit" id ="editer" class="btn btn-info btn-block">
+			    		</form>
+			    	</div>
+	    		</div>
+
+    	</div>
+    </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+<!------ Include the above in your HEAD tag ---------->
+<!---Container for the cart + scritpt that is used taken from fontawesome  ref link for the code https://bootsnipp.com/snippets/35e4p -->
+<div class="container">
+   <div class="card shopping-cart">
+		<div class="card-header bg-dark text-light">
+			<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+			Shipping cart
+			<a href="" class="btn btn-outline-info btn-sm pull-right">Continiu shopping</a>
+			<div class="clearfix"></div>
+		</div>
+		<div id="showError">
+		 <div class="card-body" id="cart">
+				<!-- PRODUCT -->	
+				<div class="row">
+					<div class="col-12 col-sm-12 col-md-2 text-center">
+							<img class="img-responsive" src="" alt="prewiew" width="120" height="80">
+					</div>
+					<div class="col-12 text-sm-center col-sm-12 text-md-left col-md-6">
+						<h4 class="product-name"><strong>Product Name</strong></h4>
+						<h4>
+							<small>Product description</small>
+						</h4>
+					</div>
+					<div class="col-12 col-sm-12 text-sm-center col-md-4 text-md-right row">
+						<div class="col-3 col-sm-3 col-md-6 text-md-right" style="padding-top: 5px">
+							<h6><strong>25.00 <span class="text-muted">x</span></strong></h6>
+						</div>
+						<div class="col-4 col-sm-4 col-md-4">
+							<div class="quantity">
+								<input type="number" step="1" max="99" min="1" value="1" title="Qty" class="qty"
+									   size="3">
+							</div>
+						</div>
+						<div class="col-2 col-sm-2 col-md-2 text-right">
+							<button type="button" class="btn btn-outline-danger btn-xs">
+								<i class="fa fa-trash" aria-hidden="true"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+				<hr>
+				<!-- END PRODUCT -->
+				<!-- PRODUCT -->
+				<div class="row">
+					<div class="col-12 col-sm-12 col-md-2 text-center">
+							<img class="img-responsive" src="" alt="prewiew" width="120" height="80">
+					</div>
+					<div class="col-12 text-sm-center col-sm-12 text-md-left col-md-6">
+						<h4 class="product-name"><strong>Product Name</strong></h4>
+						<h4>
+							<small>Product description</small>
+						</h4>
+					</div>
+					<div class="col-12 col-sm-12 text-sm-center col-md-4 text-md-right row">
+						<div class="col-3 col-sm-3 col-md-6 text-md-right" style="padding-top: 5px">
+							<h6><strong>25.00 <span class="text-muted">x</span></strong></h6>
+						</div>
+						<div class="col-4 col-sm-4 col-md-4">
+							<div class="quantity">
+								<input type="number" step="1" max="99" min="1" value="1" title="Qty" class="qty"
+									   size="4">
+							</div>
+						</div>
+						<div class="col-2 col-sm-2 col-md-2 text-right">
+							<button type="button" class="btn btn-outline-danger btn-xs">
+								<i class="fa fa-trash" aria-hidden="true"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+				<hr>
+				<!-- END PRODUCT -->
+			<div class="pull-right">
+				<a href="cart.html" class="btn btn-outline-secondary pull-right">
+					Update shopping cart
+				</a>
+			</div>
+		 </div>
+		</div>
+		<div class="card-footer" id="cartCheckout">
+			<div class="coupon col-md-5 col-sm-5 no-padding-left pull-left">
+				<div class="row">
+					<div class="col-6">
+						<input type="text" class="form-control" placeholder="cupone code">
+					</div>
+					<div class="col-6">
+						<input type="submit" class="btn btn-default" value="Use cupone">
+					</div>
+				</div>
+			</div>
+			<div class="pull-right" style="margin: 10px">
+				<a href="" class="btn btn-success pull-right">Checkout</a>
+				<div class="pull-right" style="margin: 5px">
+					Total price: <b>50.00€</b>
+				</div>
+			</div>
+		</div>		
+	</div>
 </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -181,23 +321,188 @@
 </html>
 
 <script>
-<!-- Calculation and prices addted to to the local storage -->
-let calculation = 0;
-let quantity = 0;
-let price = 340;
-localStorage.custTotalWatches = 0;
-function setInformation(){
-    quantity = 1;
-	calculation = quantity * price;
-	localStorage.custTotalWatches = calculation.toFixed(2);
-}
-function setInformationQuanty(){
-	quantity = document.getElementById('test').selectedOptions[0].value;
-	calculation = quantity * price;
-	localStorage.custTotalWatches = calculation.toFixed(2);
+let hideCardIfEmpty = "none";
+hideCardIfEmpty = document.getElementById('cart'); // link the hideRegisterButton to hideRegisterButton id
+hideCardIfEmpty.style.visibility = 'hidden';
+let hideCardIfEmptyCheckOut = "none";
+hideCardIfEmptyCheckOut = document.getElementById('cartCheckout'); // link the hideRegisterButton to hideRegisterButton id
+hideCardIfEmptyCheckOut.style.visibility = 'hidden';
+document.getElementById("showError").innerHTML = "<br>&timesYour cart is currently empty.";	
+let today = new Date().toISOString().slice(0, 10)
 
+
+document.write(today);
+
+let permissionToStart = localStorage.getItem('logStarter');//checking variable for null 
+permissionToStart = JSON.parse(permissionToStart);
+
+let permissionToStart2 = localStorage.getItem('regStarter');
+permissionToStart2 = JSON.parse(permissionToStart2);
+if(permissionToStart == null || permissionToStart2 == null){ //if its null will put the checkstarter to false
+	let start = {checkStarter: false} //when registred setting logginchecker to false into local storage
+	localStorage.setItem("starter", JSON.stringify(start));
+}
+else{ // will put the checkstarter to true
+	let start = {checkStarter: true} //when registred setting logginchecker to false into local storage
+	localStorage.setItem("starter", JSON.stringify(start));
+}	
+let getStarter = localStorage.getItem('starter'); // getting information from the local storage
+getStarter = JSON.parse(getStarter);
+
+<!-- Register array creation and button for event listener -->
+let account = [];
+const registerButton = document.getElementById("addder");
+
+<!-- Loggin details validation button for event listner and function for to check if the details match the database-->
+const button = document.getElementById("checker");
+let itemName = localStorage.getItem('account');
+itemName = JSON.parse(itemName);
+document.getElementById("logInButton").style.right = "125px";//moving div element to the right
+document.getElementById("registerButton").style.right = "12px"; //moving the div element to the left
+let hideLoginButton = "none";
+hideLoginButton = document.getElementById('logInButton'); // link the hideLoginButton to logInButton id 
+let hideRegisterButton = "none";
+hideRegisterButton = document.getElementById('registerButton'); // link the hideRegisterButton to hideRegisterButton id
+let profileButton = "none";
+profileButton = document.getElementById('profile'); // link the profileButton to profileButton id 
+let userLogOutButton = "none";
+userLogOutButton = document.getElementById('logOut'); // link the userLogOutButton to userLogOutButton id  
+userLogOutButton.style.visibility = 'hidden'; //hiding the button
+profileButton.style.visibility = 'hidden';
+if(getStarter.checkStarter == true){
+	let check = JSON.parse(localStorage.checkLoggin);//cloning the data for checkloggin from the local storage
+	let getPosition = localStorage.getItem('counter');
+	getPosition = JSON.parse(getPosition);
+	let getcounter = getPosition.possition;
+
+if(check.logginChecker == true ){ //checking if its true it will hide the loggin button
+	hideLoginButton.style.visibility = 'hidden';
+	hideRegisterButton.style.visibility = 'hidden';
+	profileButton.style.visibility = 'visible';
+	userLogOutButton.style.visibility = 'visible';
+	document.getElementById("firstName").value = itemName[getcounter].fName;
+	document.getElementById("lastName").value = itemName[getcounter].lName;
+	document.getElementById("userEmail").value = itemName[getcounter].email;
+	document.getElementById("userPassword").value = itemName[getcounter].password;
+}
+else{//if its not true it will leave it visible
+	hideLoginButton.style.visibility = 'visible'; 
+	hideRegisterButton.style.visibility = 'visible';
+	profileButton.style.visibility = 'hidden';
+	userLogOutButton.style.visibility = 'hidden';
+}
+
+}
+button.addEventListener("click", function() { //event listener when its clicked to activate the function
+	let loggin = {logginChecker: false}
+	localStorage.checkLoggin = JSON.stringify(loggin);
+    let email = document.getElementById('inputEmail').value;
+    let password = document.getElementById('inputPassword').value;
+	let found = false;
+    let entriesJSON = localStorage.getItem('account');// copy the data from local storage that was stored in account 
+    if (!entriesJSON) { //if there is no data output and error
+        alert("Nothing stored!");
+        return;
+    }
+    let allEntries = JSON.parse(entriesJSON);
+    for (let i = 0; i < allEntries.length; i++) {// loop to validate username and password from the account table
+        let entry = allEntries[i];
+        let storedUserName = entry.email;
+        let storedPassWord = entry.password;
+        let storedEmailAddress = entry.email;
+		if (email == storedUserName && password == storedPassWord) { //checking if the username that was typed match the information stored in the account
+			let counter = {possition: i}
+			localStorage.counter = JSON.stringify(counter);
+            alert("Successfully logged in!");
+			let loggin = {logginChecker: true} // rewrite the logginChekcer to true
+			localStorage.checkLoggin = JSON.stringify(loggin);
+			found = true;
+			hideLoginButton.style.visibility = 'hidden';
+			window.location.reload()
+			let start = {checkStarter: true} //when registred setting logginchecker to false into local storage
+			localStorage.setItem("logStarter", JSON.stringify(start));
+            return;			
+        }
+		else {
+			found = false; // if its not a match it will set the boolean to false so we can output it as an error later
+		} 
+	}
+	if(found == false){// if the match wasn't succsessfull it will output and error to try again
+		alert('Invalid Username or Password! Please try again.');
+	}
+})
+
+
+registerButton.addEventListener("click", function() {
+	 // Parse any JSON previously stored in allEntries
+	let loggin = {logginChecker: false} //when registred setting logginchecker to false into local storage
+	localStorage.setItem("checkLoggin", JSON.stringify(loggin));
+	let start = {checkStarter: true} //when registred setting logginchecker to true into local storage
+	localStorage.setItem("regStarter", JSON.stringify(start));
+    let existingEntries = JSON.parse(localStorage.getItem("account")); //parsing the existingEntries from the account in local storage
+    if(existingEntries == null) existingEntries = []; // if its null it creating an object
+	let firstName = document.getElementById("first_name");//creating an variable to take information from the input box
+	let lastName = document.getElementById("last_name");
+	let userEmail = document.getElementById("email");
+	let userPassword = document.getElementById("password");
+    let entry = {
+        fName: firstName.value,
+		lName: lastName.value,
+		email: userEmail.value,
+		password: userPassword.value
+    }; // storing the information into an aray
+	if (entry.fName === "" || entry.lName === ""  || entry.email === "" || entry.password === ""){// if the field are  empty alerting an error
+		alert("Please fill up all the missing fields")
+	}
+	else{ // otherwise 
+		localStorage.setItem("account", JSON.stringify(entry)); // it will take the array and stringify it as an object array 
+		existingEntries.push(entry); //     // Save allEntries back as an array of the object to local storage
+		localStorage.setItem("account", JSON.stringify(existingEntries));
+		alert("You have been successfully registred. You can Log in now. Thanks you!")
+	}
+})
+
+const logOutButton = document.getElementById("logOut");
+
+logOutButton.addEventListener("click", function() {//event listener with function to set the loginchecker to false and reload the page
+	 // Parse any JSON previously stored in allEntries
+	let loggin = {logginChecker: false} // rewrite the logginChekcer to false;
+	localStorage.checkLoggin = JSON.stringify(loggin);
+	location.reload();//reloading the page
+})
+
+const userEdit = document.getElementById("editer");
+
+userEdit.addEventListener("click", function() { //event listener when its clicked to activate the function
+    //let existingEntries = JSON.parse(localStorage.getItem("account")); //parsing the existingEntries from the account in local storage
+	let getPosition = localStorage.getItem('counter');
+	getPosition = JSON.parse(getPosition);
 	
-}
-
-
+	let getcounter = getPosition.possition;	
+	let existingEntries = localStorage.getItem('account');
+		existingEntries = JSON.parse(existingEntries);
+    if(existingEntries == null) existingEntries = []; // if its null it creating an object
+	let firstName = document.getElementById("firstName");//creating an variable to take information from the input box
+	let lastName = document.getElementById("lastName");
+	let userEmail = document.getElementById("userEmail");
+	let userPassword = document.getElementById("newPassword");
+    let entry = {
+        fName: firstName.value,
+		lName: lastName.value,
+		email: userEmail.value,
+		password: userPassword.value
+    }; // storing the information into an aray
+	if (entry.fName === "" || entry.lName === ""  || entry.email === "" || entry.password === ""){// if the field are  empty alerting an error
+		alert("Please fill up all the missing fields")
+	}
+	else{ // otherwise 
+	   localStorage.setItem("account", JSON.stringify(entry)); // it will take the array and stringify it as an object array 
+		existingEntries[getcounter].fName = firstName.value;
+		existingEntries[getcounter].lName = lastName.value;
+		existingEntries[getcounter].email = userEmail.value;
+		existingEntries[getcounter].password = userPassword.value;
+		localStorage.setItem("account", JSON.stringify(existingEntries));
+		alert("You have been successfully Changed them.")
+	}	
+})
 </script>
