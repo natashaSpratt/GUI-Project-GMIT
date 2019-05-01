@@ -1,24 +1,17 @@
-<!doctype html>
+<doctype html>
 <html lang="en">
 <head>
-  <style>
-  #registerButton {position: absolute;}
-  #logInButton {position: absolute;}
-
-  </style>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <!--Font Awesome link-->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <title>Home Page</title>
-
 </head>
 <body>
-  <!-- Nav Bar  -->
+ <!-- Nav Bar  -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#">Home Page</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,7 +38,6 @@
           <a class="nav-link" href="cart.html"><i class="fas fa-shopping-basket"></i>   Cart</a>
         </li>
       </ul>
-
 	  <div>
 		  <!--Login button -->
 		  <button id="logInButton"type="button my-4 my-lg-0" class="btn btn-primary" data-toggle = "modal" data-target = "#loginModal"><i class="fas fa-unlock"></i>    Login</button>
@@ -56,7 +48,6 @@
 		  <!-- Log Out Button-->
 		  <button id="logOut"type="button my-4 my-lg-0" class="btn btn-primary"><i class="fas fa-unlock"></i>    LogOut</button>
 	  </div>
-
       <!-- Modal for login button-->
       <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -77,7 +68,6 @@
 						<input type="text" id="inputEmail" class="form-control" name="email-address" required autofocus>
 					</div>
 				</div>
-
 				<div class="form-group row">
 					<label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
 					<div class="col-md-6">
@@ -106,7 +96,6 @@
             <div class="modal-body">
               <div class="container">
         <div class="row centered-form">
-
         	<div class="panel panel-default">
         		<div class="panel-heading">
 			    		<h3 class="panel-title">Please fill up all of the fields</h3>
@@ -125,11 +114,9 @@
 			    					</div>
 			    				</div>
 			    			</div>
-
 			    			<div class="form-group">
 			    				<input type="email" name="email" id="email" class="form-control input-sm" placeholder="Email Address">
 			    			</div>
-
 			    			<div class="row">
 			    				<div class="col-xs-6 col-sm-6 col-md-6">
 			    					<div class="form-group">
@@ -142,13 +129,10 @@
 			    					</div>
 			    				</div>
 			    			</div>
-
 			    			<input type="submit" value="Register" id ="addder" class="btn btn-info btn-block">
-
 			    		</form>
 			    	</div>
 	    		</div>
-
     	</div>
     </div>
           </div>
@@ -168,7 +152,6 @@
             <div class="modal-body">
               <div class="container">
         <div class="row centered-form">
-
         	<div class="panel panel-default">
         		<div class="panel-heading">
 			    		<h3 class="panel-title">You can change all the field by filling it up and clicking the button edit</h3>
@@ -187,11 +170,9 @@
 			    					</div>
 			    				</div>
 			    			</div>
-
 			    			<div class="form-group">
 			    				<input type="email" name="email" id="userEmail" class="form-control input-sm" placeholder="Email Address">
 			    			</div>
-
 			    			<div class="row">
 			    				<div class="col-xs-6 col-sm-6 col-md-6">
 			    					<div class="form-group">
@@ -204,9 +185,7 @@
 			    					</div>
 			    				</div>
 			    			</div>
-
 			    			<input type="submit" value="Edit" id ="editer" class="btn btn-info btn-block">
-
 			    		</form>
 			    	</div>
 	    		</div>
@@ -218,100 +197,64 @@
       </div>
     </div>
   </nav>
-  <!-- End of Bootstrap Nav Bar  -->
-  <!-- End of Bootstrap Nav Bar  -->
-    <!-- Container for carousel and images and sidebars  -->
-  <div class="container">
-  <div class="row">
-    <div class="col">
-      1 of 2
-    </div>
-    <div class="col">
-      2 of 2
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      1 of 3
-    </div>
-
-      <!-- Carousel Bootstrap  -->
-      <div class="bd-example col-lg-8 col-xl-8 col-sm-12 col-xs-12 mx-auto" >
-
-        <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-          <ol class="carousel-indicators">
-            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-          </ol>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="bike.jpg" class="d-block w-100" alt="...">
-              <div class="carousel-caption d-none d-md-block">
-                <h2>Lorem Ipsum</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="clothing.jpg" class="d-block w-100" alt="">
-              <div class="carousel-caption d-none d-md-block">
-                <h2>Lorem Ipsum Second</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="Accessories.jpg" class="d-block w-100" alt="...">
-              <div class="carousel-caption d-none d-md-block">
-                <h2>Lorem Ipsum Third</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
-              </div>
-            </div>
-          </div>
-          <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <div class="container">
+      <div class="card-group">
+          <!-- card 1 of row 1  cards need price and names added-->
+      <div class="card">
+        <img src="gtx.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">OUTDOORSMAN CRAFT @COLLECTION</h5>
+          <p class="card-text">Only found on Our Website, the Outdoorsman Craft RB3422Q are designed with Nature enthusiasts in mind. Inspired by the Aviator Classic, they have unmistakable iconic features but are handcrafted with outdoorsy materials.</p>
+        </div>
+        <div class="card-footer">
+          <button type="button my-4 my-lg-0" onClick="item7()" class="btn btn-primary">Add to Cart</button>
         </div>
       </div>
-      <br><br>
-      <!-- Bootstrap Carousel End -->
-    <div class="col">
-      3 of 3
+        <!-- card 2 of row 1 -->
+      <div class="card">
+        <img src="armani.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Emporio Armani @EA4029</h5>
+          <p class="card-text">Emporio Armani EA4029 sunglasses resonate with every man who appreciates Aviator-inspired styling with clean, modern lines
+Begun over three decades ago; Emporio Armani sunglasses have become legendary for crafting modern designs with a European aesthetic.</p>
+        </div>
+        <div class="card-footer">
+          <button type="button my-4 my-lg-0" onClick="item8()" class="btn btn-primary">Add To Cart</button>
+        </div>
+      </div>
+      <!-- card 3 of row 1 -->
+      <div class="card">
+        <img src="louis.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">LOUIS VUITTON SUNGLASSES Black Aviator Sunglasses ( L5996 )</h5>
+          <p class="card-text">This item will come with its original box and paper work. 100% UV Protection. LV logo engrave on the right lens. Matching graded lenses. Sculpted and hand polished acetate frames. Bridge and tips enhanced with a metal inlay.</p>
+        </div>
+        <div class="card-footer">
+          <button type="button my-4 my-lg-0" onClick="item9()" class="btn btn-primary">Add To Cart</button>
+        </div>
+      </div>
     </div>
-  </div>
 </div>
-<!-- Cantainer For Carousel and Sidebars end-->
-
-
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-</body>
+  </body>
 </html>
 <script>
-let permissionToResetItem = localStorage.getItem('itemReset');//checking variable for null
-permissionToResetItem = JSON.parse(permissionToResetItem);
-let value = false;
-if(permissionToResetItem == undefined){
-localStorage.setItem('item1', value); // set the item1
-localStorage.setItem('item2', value); // set the item2
-localStorage.setItem('item3', value); // set the item3
-localStorage.setItem('item4', value); // set the item4
-localStorage.setItem('item5', value); // set the item5
-localStorage.setItem('item6', value); // set the item6
-localStorage.setItem('item7', value); // set the item7
-localStorage.setItem('item8', value); // set the item8
-localStorage.setItem('item9', value); // set the item9
-localStorage.setItem('item9', value); // set the item9
-localStorage.setItem('itemReset', value); // set the item9
+function item7(){
+ localStorage.setItem('item7', true);
+ alert("Item was successfully added to cart. Thank you!");
 }
-
+function item8(){
+ localStorage.setItem('item8', true);
+  alert("Item was successfully added to cart. Thank you!");
+}
+function item9(){
+ localStorage.setItem('item9', true);
+  alert("Item was successfully added to cart. Thank you!");
+}
 let permissionToStart = localStorage.getItem('logStarter');//checking variable for null
 permissionToStart = JSON.parse(permissionToStart);
 
@@ -436,10 +379,10 @@ registerButton.addEventListener("click", function() {
 	alert("Please fill up all the missing fields")
 	}
 	else{ // otherwise
-    localStorage.setItem("account", JSON.stringify(entry)); // it will take the array and stringify it as an object array
-    existingEntries.push(entry); //     // Save allEntries back as an array of the object to local storage
-    localStorage.setItem("account", JSON.stringify(existingEntries));
-	alert("You have been successfully registred. You can Log in now. Thanks you!")
+		localStorage.setItem("account", JSON.stringify(entry)); // it will take the array and stringify it as an object array
+		existingEntries.push(entry); //     // Save allEntries back as an array of the object to local storage
+		localStorage.setItem("account", JSON.stringify(existingEntries));
+		alert("You have been successfully registred. You can Log in now. Thanks you!")
 	}
 
 })
@@ -478,14 +421,13 @@ userEdit.addEventListener("click", function() { //event listener when its clicke
 	alert("Please fill up all the missing fields")
 	}
 	else{ // otherwise
-   localStorage.setItem("account", JSON.stringify(entry)); // it will take the array and stringify it as an object array
-    existingEntries[getcounter].fName = firstName.value;
-	existingEntries[getcounter].lName = lastName.value;
-	existingEntries[getcounter].email = userEmail.value;
-	existingEntries[getcounter].password = userPassword.value;
-    localStorage.setItem("account", JSON.stringify(existingEntries));
-	alert("You have been successfully Changed them.")
+		localStorage.setItem("account", JSON.stringify(entry)); // it will take the array and stringify it as an object array
+		existingEntries[getcounter].fName = firstName.value;
+		existingEntries[getcounter].lName = lastName.value;
+		existingEntries[getcounter].email = userEmail.value;
+		existingEntries[getcounter].password = userPassword.value;
+		localStorage.setItem("account", JSON.stringify(existingEntries));
+		alert("You have been successfully Changed them.")
 	}
 })
-
 </script>

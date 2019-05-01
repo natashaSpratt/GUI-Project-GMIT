@@ -32,16 +32,16 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
         </li>
         <!-- Nav Bar  dropdown Menu for products -->
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Shop</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Clothing</a>
-            <a class="dropdown-item" href="#">Sports</a>
-            <a class="dropdown-item" href="#">Accessories</a>
+            <a class="dropdown-item" href="clothing.html">Clothing</a>
+            <a class="dropdown-item" href="sports.html">Sports</a>
+            <a class="dropdown-item" href="accessories.html">Accessories</a>
           </div>
         </li>
         <!--Navbar link to Cart -->
@@ -226,87 +226,292 @@
 		<div id="showError">
 		 <div class="card-body" id="cart">
 				<!-- PRODUCT -->	
-				<div class="row">
+				<div class="row" id="item1">
 					<div class="col-12 col-sm-12 col-md-2 text-center">
-							<img class="img-responsive" src="" alt="prewiew" width="120" height="80">
+							<img class="img-responsive" src="nortface.jpg" alt="prewiew" width="120" height="80">
 					</div>
 					<div class="col-12 text-sm-center col-sm-12 text-md-left col-md-6">
-						<h4 class="product-name"><strong>Product Name</strong></h4>
+						<h4 class="product-name"><strong>The North Face Evolve II Waterproof Men's Jacket, Black</strong></h4>
 						<h4>
-							<small>Product description</small>
+							<small>Size medium</small>
 						</h4>
 					</div>
 					<div class="col-12 col-sm-12 text-sm-center col-md-4 text-md-right row">
 						<div class="col-3 col-sm-3 col-md-6 text-md-right" style="padding-top: 5px">
-							<h6><strong>25.00 <span class="text-muted">x</span></strong></h6>
+							<h6><strong>49.99 <span class="text-muted">x</span></strong></h6>
 						</div>
 						<div class="col-4 col-sm-4 col-md-4">
 							<div class="quantity">
-								<input type="number" step="1" max="99" min="1" value="1" title="Qty" class="qty"
+								<input id="quantity1" type="number" step="1" max="99" oninput="startCart()" min="1" value="1" title="Qty" class="qty"
 									   size="3">
 							</div>
 						</div>
 						<div class="col-2 col-sm-2 col-md-2 text-right">
-							<button type="button" class="btn btn-outline-danger btn-xs">
+							<button type="button" onClick="deleteItem1()" class="btn btn-outline-danger btn-xs">
 								<i class="fa fa-trash" aria-hidden="true"></i>
 							</button>
 						</div>
 					</div>
+				  <hr>
 				</div>
-				<hr>
 				<!-- END PRODUCT -->
 				<!-- PRODUCT -->
-				<div class="row">
+				<div class="row" id="item2">
 					<div class="col-12 col-sm-12 col-md-2 text-center">
-							<img class="img-responsive" src="" alt="prewiew" width="120" height="80">
+							<img class="img-responsive" src="ntPants.jpg" alt="prewiew" width="120" height="80">
 					</div>
 					<div class="col-12 text-sm-center col-sm-12 text-md-left col-md-6">
-						<h4 class="product-name"><strong>Product Name</strong></h4>
+						<h4 class="product-name"><strong>The North Face Ventacious Cargo Pants</strong></h4>
 						<h4>
-							<small>Product description</small>
+							<small>Size medium</small>
 						</h4>
 					</div>
 					<div class="col-12 col-sm-12 text-sm-center col-md-4 text-md-right row">
 						<div class="col-3 col-sm-3 col-md-6 text-md-right" style="padding-top: 5px">
-							<h6><strong>25.00 <span class="text-muted">x</span></strong></h6>
+							<h6><strong>35.00 <span class="text-muted">x</span></strong></h6>
 						</div>
 						<div class="col-4 col-sm-4 col-md-4">
 							<div class="quantity">
-								<input type="number" step="1" max="99" min="1" value="1" title="Qty" class="qty"
+								<input id="quantity2" type="number" step="1" max="99" oninput="startCart()" min="1" value="1" title="Qty" class="qty"
 									   size="4">
 							</div>
 						</div>
 						<div class="col-2 col-sm-2 col-md-2 text-right">
-							<button type="button" class="btn btn-outline-danger btn-xs">
+							<button type="button" onClick="deleteItem2()" class="btn btn-outline-danger btn-xs">
 								<i class="fa fa-trash" aria-hidden="true"></i>
 							</button>
 						</div>
 					</div>
+				  <hr>
 				</div>
-				<hr>
 				<!-- END PRODUCT -->
-			<div class="pull-right">
-				<a href="cart.html" class="btn btn-outline-secondary pull-right">
-					Update shopping cart
-				</a>
-			</div>
+								<!-- PRODUCT -->
+				<div class="row" id="item3">
+					<div class="col-12 col-sm-12 col-md-2 text-center">
+							<img class="img-responsive" src="ntTshirt.jpg" alt="prewiew" width="120" height="80">
+					</div>
+					<div class="col-12 text-sm-center col-sm-12 text-md-left col-md-6">
+						<h4 class="product-name"><strong>Supreme The North Face Metallic Logo T-Shirt Black</strong></h4>
+						<h4>
+							<small>Size medium</small>
+						</h4>
+					</div>
+					<div class="col-12 col-sm-12 text-sm-center col-md-4 text-md-right row">
+						<div class="col-3 col-sm-3 col-md-6 text-md-right" style="padding-top: 5px">
+							<h6><strong>156.00 <span class="text-muted">x</span></strong></h6>
+						</div>
+						<div class="col-4 col-sm-4 col-md-4">
+							<div class="quantity">
+								<input id="quantity3" type="number" step="1" max="99" oninput="startCart()" min="1" value="1" title="Qty" class="qty"
+									   size="4">
+							</div>
+						</div>
+						<div class="col-2 col-sm-2 col-md-2 text-right">
+							<button type="button" onClick="deleteItem3()" class="btn btn-outline-danger btn-xs">
+								<i class="fa fa-trash" aria-hidden="true"></i>
+							</button>
+						</div>
+					</div>
+				  <hr>
+				</div>
+				<!-- END PRODUCT -->
+				<!-- PRODUCT -->
+				<div class="row" id="item4">
+					<div class="col-12 col-sm-12 col-md-2 text-center">
+							<img class="img-responsive" src="sportBoots.jpg" alt="prewiew" width="120" height="80">
+					</div>
+					<div class="col-12 text-sm-center col-sm-12 text-md-left col-md-6">
+						<h4 class="product-name"><strong>PUMA ADULT FUTURE 19.1 NETFIT SG POWER-UP</strong></h4>
+						<h4>
+							<small>Size 10</small>
+						</h4>
+					</div>
+					<div class="col-12 col-sm-12 text-sm-center col-md-4 text-md-right row">
+						<div class="col-3 col-sm-3 col-md-6 text-md-right" style="padding-top: 5px">
+							<h6><strong>69.99 <span class="text-muted">x</span></strong></h6>
+						</div>
+						<div class="col-4 col-sm-4 col-md-4">
+							<div class="quantity">
+								<input id="quantity4" type="number" step="1" max="99"  oninput="startCart()" min="1" value="1" title="Qty" class="qty"
+									   size="4">
+							</div>
+						</div>
+						<div class="col-2 col-sm-2 col-md-2 text-right">
+							<button type="button" onClick="deleteItem4()" class="btn btn-outline-danger btn-xs">
+								<i class="fa fa-trash" aria-hidden="true"></i>
+							</button>
+						</div>
+					</div>
+				  <hr>
+				</div>
+				<!-- END PRODUCT -->
+				<!-- PRODUCT -->
+				<div class="row" id="item5">
+					<div class="col-12 col-sm-12 col-md-2 text-center">
+							<img class="img-responsive" src="sportboots2.jpg" alt="prewiew" width="120" height="80">
+					</div>
+					<div class="col-12 text-sm-center col-sm-12 text-md-left col-md-6">
+						<h4 class="product-name"><strong>NIKE ADULT TIEMPO LEGEND ACADEMY FG STEALTH</strong></h4>
+						<h4>
+							<small>Size 9</small>
+						</h4>
+					</div>
+					<div class="col-12 col-sm-12 text-sm-center col-md-4 text-md-right row">
+						<div class="col-3 col-sm-3 col-md-6 text-md-right" style="padding-top: 5px">
+							<h6><strong>89.99 <span class="text-muted">x</span></strong></h6>
+						</div>
+						<div class="col-4 col-sm-4 col-md-4">
+							<div class="quantity">
+								<input id="quantity5" type="number" step="1" max="99" oninput="startCart()" min="1" value="1" title="Qty" class="qty"
+									   size="4">
+							</div>
+						</div>
+						<div class="col-2 col-sm-2 col-md-2 text-right">
+							<button type="button" onClick="deleteItem5()" class="btn btn-outline-danger btn-xs">
+								<i class="fa fa-trash" aria-hidden="true"></i>
+							</button>
+						</div>
+					</div>
+				  <hr>
+				</div>
+				<!-- END PRODUCT -->
+				<!-- PRODUCT -->
+				<div class="row" id="item6">
+					<div class="col-12 col-sm-12 col-md-2 text-center">
+							<img class="img-responsive" src="boots3.jpg" alt="prewiew" width="120" height="80">
+					</div>
+					<div class="col-12 text-sm-center col-sm-12 text-md-left col-md-6">
+						<h4 class="product-name"><strong>Nike Stealth Ops Mercurial Vapor MG Junior</strong></h4>
+						<h4>
+							<small>Size 10</small>
+						</h4>
+					</div>
+					<div class="col-12 col-sm-12 text-sm-center col-md-4 text-md-right row">
+						<div class="col-3 col-sm-3 col-md-6 text-md-right" style="padding-top: 5px">
+							<h6><strong>99.99 <span class="text-muted">x</span></strong></h6>
+						</div>
+						<div class="col-4 col-sm-4 col-md-4">
+							<div class="quantity">
+								<input id="quantity6" type="number" step="1" max="99" oninput="startCart()" min="1" value="1" title="Qty" class="qty"
+									   size="4">
+							</div>
+						</div>
+						<div class="col-2 col-sm-2 col-md-2 text-right">
+							<button type="button" onClick="deleteItem6()" class="btn btn-outline-danger btn-xs">
+								<i class="fa fa-trash" aria-hidden="true"></i>
+							</button>
+						</div>
+					</div>
+				  <hr>
+				</div>
+				<!-- END PRODUCT -->
+				<!-- PRODUCT -->
+				<div class="row" id="item7">
+					<div class="col-12 col-sm-12 col-md-2 text-center">
+							<img class="img-responsive" src="gtx.png" alt="prewiew" width="120" height="80">
+					</div>
+					<div class="col-12 text-sm-center col-sm-12 text-md-left col-md-6">
+						<h4 class="product-name"><strong>OUTDOORSMAN CRAFT @COLLECTION</strong></h4>
+						<h4>
+							<small>Ray Ban Sunglasses</small>
+						</h4>
+					</div>
+					<div class="col-12 col-sm-12 text-sm-center col-md-4 text-md-right row">
+						<div class="col-3 col-sm-3 col-md-6 text-md-right" style="padding-top: 5px">
+							<h6><strong>36.99 <span class="text-muted">x</span></strong></h6>
+						</div>
+						<div class="col-4 col-sm-4 col-md-4">
+							<div class="quantity">
+								<input id="quantity7" type="number" step="1" max="99" oninput="startCart()" min="1" value="1" title="Qty" class="qty"
+									   size="4">
+							</div>
+						</div>
+						<div class="col-2 col-sm-2 col-md-2 text-right">
+							<button type="button" onClick="deleteItem7()" class="btn btn-outline-danger btn-xs">
+								<i class="fa fa-trash" aria-hidden="true"></i>
+							</button>
+						</div>
+					</div>
+				  <hr>
+				</div>
+				<!-- END PRODUCT -->
+				<!-- PRODUCT -->
+				<div class="row" id="item8">
+					<div class="col-12 col-sm-12 col-md-2 text-center">
+							<img class="img-responsive" src="armani.jpg" alt="prewiew" width="120" height="80">
+					</div>
+					<div class="col-12 text-sm-center col-sm-12 text-md-left col-md-6">
+						<h4 class="product-name"><strong>Emporio Armani @EA4029</strong></h4>
+						<h4>
+							<small>Emporio Armani Sunglasses</small>
+						</h4>
+					</div>
+					<div class="col-12 col-sm-12 text-sm-center col-md-4 text-md-right row">
+						<div class="col-3 col-sm-3 col-md-6 text-md-right" style="padding-top: 5px">
+							<h6><strong>15.99 <span class="text-muted">x</span></strong></h6>
+						</div>
+						<div class="col-4 col-sm-4 col-md-4">
+							<div class="quantity">
+								<input id="quantity8" type="number" step="1" max="99" min="1" oninput="startCart()" value="1" title="Qty" class="qty"
+									   size="4">
+							</div>
+						</div>
+						<div class="col-2 col-sm-2 col-md-2 text-right">
+							<button type="button" onClick="deleteItem8()" class="btn btn-outline-danger btn-xs">
+								<i class="fa fa-trash" aria-hidden="true"></i>
+							</button>
+						</div>
+					</div>
+				  <hr>
+				</div>	
+				<!-- END PRODUCT -->
+				<!-- PRODUCT -->
+				<div class="row" id="item9">
+					<div class="col-12 col-sm-12 col-md-2 text-center">
+							<img class="img-responsive" src="louis.jpg" alt="prewiew" width="120" height="80">
+					</div>
+					<div class="col-12 text-sm-center col-sm-12 text-md-left col-md-6">
+						<h4 class="product-name"><strong>LOUIS VUITTON Black Aviator Sunglasse( L5996 )</strong></h4>
+						<h4>
+							<small>LOUIS VUITTON SUNGLASSES</small>
+						</h4>
+					</div>
+					<div class="col-12 col-sm-12 text-sm-center col-md-4 text-md-right row">
+						<div class="col-3 col-sm-3 col-md-6 text-md-right" style="padding-top: 5px">
+							<h6><strong>29.99 <span class="text-muted">x</span></strong></h6>
+						</div>
+						<div class="col-4 col-sm-4 col-md-4">
+							<div class="quantity">
+								<input id="quantity9" type="number" step="1" max="99" oninput="startCart()" min="1" value="1" title="Qty" class="qty"
+									   size="4">
+							</div>
+						</div>
+						<div class="col-2 col-sm-2 col-md-2 text-right">
+							<button type="button" onClick="deleteItem9()" class="btn btn-outline-danger btn-xs">
+								<i class="fa fa-trash" aria-hidden="true"></i>
+							</button>
+						</div>
+					</div>
+					<hr>
+				</div>		
+				<!-- END PRODUCT -->			
 		 </div>
 		</div>
 		<div class="card-footer" id="cartCheckout">
 			<div class="coupon col-md-5 col-sm-5 no-padding-left pull-left">
 				<div class="row">
 					<div class="col-6">
-						<input type="text" class="form-control" placeholder="cupone code">
+						<input id="couponCheck" type="text" class="form-control" placeholder="cupone code">
 					</div>
 					<div class="col-6">
-						<input type="submit" class="btn btn-default" value="Use cupone">
+						<input onclick="couponChecker()" type="submit" class="btn btn-default" value="Use cupone">
 					</div>
 				</div>
 			</div>
 			<div class="pull-right" style="margin: 10px">
-				<a href="" class="btn btn-success pull-right">Checkout</a>
-				<div class="pull-right" style="margin: 5px">
-					Total price: <b>50.00€</b>
+				<a onclick="resetCart()" href="" class="btn btn-success pull-right">Checkout</a>
+				<div id="totalPrice" class="pull-right" style="margin: 5px">
+					
 				</div>
 			</div>
 		</div>		
@@ -322,16 +527,216 @@
 
 <script>
 let hideCardIfEmpty = "none";
-hideCardIfEmpty = document.getElementById('cart'); // link the hideRegisterButton to hideRegisterButton id
-hideCardIfEmpty.style.visibility = 'hidden';
+hideCardIfEmpty = document.getElementById('cart'); // link the hideCardIfEmpty to cart id
+hideCardIfEmpty.style.visibility = 'visible';
 let hideCardIfEmptyCheckOut = "none";
-hideCardIfEmptyCheckOut = document.getElementById('cartCheckout'); // link the hideRegisterButton to hideRegisterButton id
+hideCardIfEmptyCheckOut = document.getElementById('cartCheckout'); // link the hideRegisterButton to hideRegisterButton id	
+let discount = false;
+let discountCheck = "discount10";
+let removeitem1,removeitem2,removeitem3,removeitem4,removeitem5,removeitem6,removeitem7,removeitem8,removeitem9 = "none";
+removeitem1 = document.getElementById('item1'); // link the removeitem1 to item1 id
+removeitem2 = document.getElementById('item2'); // link the removeitem2 to item2 id
+removeitem3 = document.getElementById('item3'); // link the removeitem3 to item3 id
+removeitem4 = document.getElementById('item4'); // link the removeitem4 to item4 id
+removeitem5 = document.getElementById('item5'); // link the removeitem5 to item5 id
+removeitem6 = document.getElementById('item6'); // link the removeitem6 to item6 id
+removeitem7 = document.getElementById('item7'); // link the removeitem7 to item7 id
+removeitem8 = document.getElementById('item8'); // link the removeitem8 to item8 id
+removeitem9 = document.getElementById('item9'); // link the removeitem9 to item9 id
+
+let item1,item2,item3,item4,item5,item6,item7,item8,item9 = 'null';
+item1 = JSON.parse(localStorage.getItem('item1')); // converting to the original type and getting the item from the local storage with key name item1. And so on for the rest of the code
+item2 = JSON.parse(localStorage.getItem('item2'));
+item3 = JSON.parse(localStorage.getItem('item3'));
+item4 = JSON.parse(localStorage.getItem('item4'));
+item5 = JSON.parse(localStorage.getItem('item5'));
+item6 = JSON.parse(localStorage.getItem('item6'));
+item7 = JSON.parse(localStorage.getItem('item7'));
+item8 = JSON.parse(localStorage.getItem('item8'));
+item9 = JSON.parse(localStorage.getItem('item9'));//finishing with the parsing
+startCart();//function to start the cart 
+function couponChecker(){
+	let takeCoupon = document.getElementById("couponCheck").value;
+	if(discountCheck == takeCoupon){
+	discount = true;
+	alert("10% Coupon applied.Thank you!");
+	}
+	else{
+	alert("Please enter a valid coupon");
+	}
+	startCart();
+}
+function startCart(){
+if(item1 == false && item2 == false && item3 == false && item4 == false && item5 == false && item6 == false && item7 == false && item8 == false && item9 == false ){ // if everything is false it will output empty cart
+document.getElementById("showError").innerHTML = "<br>&timesYour cart is currently empty.";
+
 hideCardIfEmptyCheckOut.style.visibility = 'hidden';
-document.getElementById("showError").innerHTML = "<br>&timesYour cart is currently empty.";	
-let today = new Date().toISOString().slice(0, 10)
-
-
-document.write(today);
+}
+else{
+let priceItem1 = 49.99;
+let priceItem2 = 35.00;
+let priceItem3 = 156.00;
+let priceItem4 = 69.99;
+let priceItem5 = 89.99;
+let priceItem6 = 99.99;
+let priceItem7 = 36.99;
+let priceItem8 = 15.99;
+let priceItem9 = 29.99;
+let calculation = 0;
+let quantityItem1,quantityItem2,quantityItem3,quantityItem4,quantityItem5,quantityItem6,quantityItem7,quantityItem8,quantityItem9 = 1;    
+if(item1 == false){ // checking if the item on is select if not it will remove the entire div 
+	if(removeitem1.parentElement){//checking if there is a element 
+		removeitem1.parentElement.removeChild(removeitem1); //removing the div
+		priceItem1 = 0;
+	}
+}
+else{// otherwise it will calculate the total
+	quantityItem1 = document.getElementById("quantity1").value;
+	calculation = priceItem1 * quantityItem1; // calculating the total
+}
+if(item2 == false){// checking if the item on is select if not it will remove the entire div 
+	if(removeitem2.parentElement){//checking if there is a element 
+		removeitem2.parentElement.removeChild(removeitem2);//removing the div
+		priceItem2 = 0;
+	}
+}
+else{
+	quantityItem2 = document.getElementById("quantity2").value; 
+	calculation = calculation + (priceItem2 * quantityItem2);// calculating the total
+}
+if(item3 == false){
+	if(removeitem3.parentElement){//checking if there is a element 
+		removeitem3.parentElement.removeChild(removeitem3);
+		priceItem3 = 0;
+	}
+}
+else{
+	quantityItem3 = document.getElementById("quantity3").value; 
+	calculation = calculation + (priceItem3 * quantityItem3);// calculating the total
+}
+if(item4 == false){
+	if(removeitem4.parentElement){
+	removeitem4.parentElement.removeChild(removeitem4);
+	priceItem4 = 0;
+	}
+}
+else{
+	quantityItem4 = document.getElementById("quantity3").value; 
+	calculation = calculation + (priceItem4 * quantityItem4);// calculating the total
+}
+if(item5 == false){
+	if(removeitem5.parentElement){
+	removeitem5.parentElement.removeChild(removeitem5);
+	priceItem5 = 0;
+	}
+}
+else{
+	quantityItem5 = document.getElementById("quantity3").value; 
+	calculation = calculation + (priceItem5 * quantityItem5);// calculating the total
+}
+if(item6 == false){
+	if(removeitem6.parentElement){
+		removeitem6.parentElement.removeChild(removeitem6);
+		priceItem6 = 0;
+	}
+}
+else{
+	quantityItem6 = document.getElementById("quantity3").value; 
+	calculation = calculation + (priceItem6 * quantityItem6);// calculating the total
+}
+if(item7 == false){
+	if(removeitem7.parentElement){
+		removeitem7.parentElement.removeChild(removeitem7);
+		priceItem7 = 0;
+	}
+}
+else{
+	quantityItem7 = document.getElementById("quantity3").value; 
+	calculation = calculation + (priceItem7 * quantityItem7);// calculating the total
+}
+if(item8 == false){
+	if(removeitem8.parentElement){
+		removeitem8.parentElement.removeChild(removeitem8);
+		priceItem8 = 0;
+	}
+}
+else{
+	quantityItem8 = document.getElementById("quantity3").value; 
+	calculation = calculation + (priceItem8 * quantityItem8);// calculating the total
+}
+if(item9 == false){
+	if(removeitem9.parentElement){
+		removeitem9.parentElement.removeChild(removeitem9);
+		priceItem9 = 0;
+	}
+}
+else{
+	quantityItem9 = document.getElementById("quantity3").value; 
+	calculation = calculation + (priceItem9 * quantityItem9);// calculating the total
+}
+if (discount == true){
+	calculation = calculation - (calculation * 0.10);
+	calculation = calculation.toFixed(2);//puting it to 2 decimal places
+	document.getElementById("totalPrice").innerHTML = ("Total price: <b>" +calculation +"€</b>");// output the total
+}
+else{
+calculation = calculation.toFixed(2);//puting it to 2 decimal places
+document.getElementById("totalPrice").innerHTML = ("Total price: <b>" +calculation +"€</b>");// output the total
+}
+}
+}
+function resetCart(){
+alert("Thank you for shoping from us!");
+let value = false;
+localStorage.setItem('item1', value); // set the item1 with value false
+localStorage.setItem('item2', value); // set the item2
+localStorage.setItem('item3', value); // set the item3
+localStorage.setItem('item4', value); // set the item4
+localStorage.setItem('item5', value); // set the item5
+localStorage.setItem('item6', value); // set the item6
+localStorage.setItem('item7', value); // set the item7
+localStorage.setItem('item8', value); // set the item8
+localStorage.setItem('item9', value); // set the item9
+localStorage.setItem('item9', value); // set the item9
+localStorage.setItem('itemReset', value); // set the item9
+startCart();
+}
+function deleteItem1(){// function to remove the entire element
+removeitem1.parentElement.removeChild(removeitem1);//removing element 1 with id item1 and so on for the rest
+localStorage.setItem('item1', false);
+}
+function deleteItem2(){// function to remove the entire element
+removeitem2.parentElement.removeChild(removeitem2);
+localStorage.setItem('item2', false);
+}
+function deleteItem3(){// function to remove the entire element
+removeitem3.parentElement.removeChild(removeitem3);
+localStorage.setItem('item3', false);
+}
+function deleteItem4(){// function to remove the entire element
+removeitem4.parentElement.removeChild(removeitem4);
+localStorage.setItem('item4', false);
+}
+function deleteItem5(){// function to remove the entire element
+removeitem5.parentElement.removeChild(removeitem5);
+localStorage.setItem('item5', false);
+}
+function deleteItem6(){// function to remove the entire element
+removeitem6.parentElement.removeChild(removeitem6);
+localStorage.setItem('item6', false);
+}
+function deleteItem7(){// function to remove the entire element
+removeitem7.parentElement.removeChild(removeitem7);
+localStorage.setItem('item7', false);
+}
+function deleteItem8(){// function to remove the entire element
+removeitem8.parentElement.removeChild(removeitem8);
+localStorage.setItem('item8', false);
+}
+function deleteItem9(){// function to remove the entire element
+removeitem9.parentElement.removeChild(removeitem9);
+localStorage.setItem('item9', false);
+}
 
 let permissionToStart = localStorage.getItem('logStarter');//checking variable for null 
 permissionToStart = JSON.parse(permissionToStart);
