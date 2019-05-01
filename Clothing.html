@@ -1,24 +1,19 @@
 <doctype html>
 <html lang="en">
-<meta charset="UTF-8">
-<meta name="google" content="notranslate">
-<meta http-equiv="Content-Language" content="en">
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <!--Font Awesome link-->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-  <title>Clothing</title>
-
+  <title>Home Page</title>
 </head>
 <body>
-  <!-- Nav Bar  -->
+ <!-- Nav Bar  -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="index">Home Page</a>
+    <a class="navbar-brand" href="#">Home Page</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -26,16 +21,16 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="index">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
         </li>
         <!-- Nav Bar  dropdown Menu for products -->
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Shop</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="Clothing.html">Clothing</a>
-            <a class="dropdown-item" href="Sports.html">Sports</a>
-            <a class="dropdown-item" href="Accessories.html">Accessories</a>
+            <a class="dropdown-item" href="clothing.html">Clothing</a>
+            <a class="dropdown-item" href="sports.html">Sports</a>
+            <a class="dropdown-item" href="accessories.html">Accessories</a>
           </div>
         </li>
         <!--Navbar link to Cart -->
@@ -43,10 +38,16 @@
           <a class="nav-link" href="cart.html"><i class="fas fa-shopping-basket"></i>   Cart</a>
         </li>
       </ul>
-
-
-      <!--Login button -->
-      <button type="button my-4 my-lg-0" class="btn btn-primary" data-toggle = "modal" data-target = "#loginModal"><i class="fas fa-unlock"></i>    Login</button>
+	  <div>
+		  <!--Login button -->
+		  <button id="logInButton"type="button my-4 my-lg-0" class="btn btn-primary" data-toggle = "modal" data-target = "#loginModal"><i class="fas fa-unlock"></i>    Login</button>
+		  <!--Register button -->
+		  <button id="registerButton"type="button my-4 my-lg-0" class="btn btn-primary " data-toggle = "modal" data-target = "#registerModal"><i class="fas fa-unlock"></i>    Register</button>
+		  <!-- Profile Button-->
+		  <button id="profile"type="button my-4 my-lg-0" class="btn btn-primary " data-toggle = "modal" data-target = "#profileEditModal"><i class="fas fa-unlock"></i>    Profile</button>
+		  <!-- Log Out Button-->
+		  <button id="logOut"type="button my-4 my-lg-0" class="btn btn-primary"><i class="fas fa-unlock"></i>    LogOut</button>
+	  </div>
       <!-- Modal for login button-->
       <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -57,10 +58,143 @@
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
+            <div class="modal-body">
+              <center>
+                <!-- Login Form  -->
+                <!-- Needs Work  -->
+				 <div class="form-group row">
+					<label for="email_address" class="col-md-4 col-form-label text-md-right">E-Mail Address</label>
+					<div class="col-md-6">
+						<input type="text" id="inputEmail" class="form-control" name="email-address" required autofocus>
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
+					<div class="col-md-6">
+						<input type="password" id="inputPassword" class="form-control" name="password" required>
+					</div>
+				</div>
+            <div class="modal-footer">
+                <!-- Button or input for login -->
+               <input type="submit" value="Register">
+              <button type="submit" id="checker" class="btn btn-primary">Login</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+	 <!-- Modal for register button-->
+      <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="loginModalLabel"><b>Welcome to Register menu.</b></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="container">
+        <div class="row centered-form">
+        	<div class="panel panel-default">
+        		<div class="panel-heading">
+			    		<h3 class="panel-title">Please fill up all of the fields</h3>
+			 			</div>
+			 			<div class="panel-body">
+			    		<form role="form">
+			    			<div class="row">
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			                <input type="text" name="first_name" id="first_name" class="form-control input-sm" placeholder="First Name">
+			    					</div>
+			    				</div>
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			    						<input type="text" name="last_name" id="last_name" class="form-control input-sm" placeholder="Last Name">
+			    					</div>
+			    				</div>
+			    			</div>
+			    			<div class="form-group">
+			    				<input type="email" name="email" id="email" class="form-control input-sm" placeholder="Email Address">
+			    			</div>
+			    			<div class="row">
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			    						<input type="password" name="password" id="password" class="form-control input-sm" placeholder="Password">
+			    					</div>
+			    				</div>
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			    						<input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-sm" placeholder="Confirm Password">
+			    					</div>
+			    				</div>
+			    			</div>
+			    			<input type="submit" value="Register" id ="addder" class="btn btn-info btn-block">
+			    		</form>
+			    	</div>
+	    		</div>
+    	</div>
+    </div>
+          </div>
+        </div>
+      </div>
+    </div>
+	<!-- Modal for register button-->
+      <div class="modal fade" id="profileEditModal" tabindex="-1" role="dialog" aria-labelledby="profileEditModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="loginModalLabel"><b>Welcome to Profile menu.</b></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="container">
+        <div class="row centered-form">
+        	<div class="panel panel-default">
+        		<div class="panel-heading">
+			    		<h3 class="panel-title">You can change all the field by filling it up and clicking the button edit</h3>
+			 			</div>
+			 			<div class="panel-body">
+			    		<form role="form">
+			    			<div class="row">
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			                <input type="text" name="first_name" id="firstName" class="form-control input-sm" placeholder="First Name">
+			    					</div>
+			    				</div>
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			    						<input type="text" name="last_name" id="lastName" class="form-control input-sm" placeholder="Last Name">
+			    					</div>
+			    				</div>
+			    			</div>
+			    			<div class="form-group">
+			    				<input type="email" name="email" id="userEmail" class="form-control input-sm" placeholder="Email Address">
+			    			</div>
+			    			<div class="row">
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			    						<input type="password" name="password" id="userPassword" class="form-control input-sm" placeholder="Password">
+			    					</div>
+			    				</div>
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			    						<input type="password" name="password_confirmation" id="newPassword" class="form-control input-sm" placeholder="New Password">
+			    					</div>
+			    				</div>
+			    			</div>
+			    			<input type="submit" value="Edit" id ="editer" class="btn btn-info btn-block">
+			    		</form>
+			    	</div>
+	    		</div>
+
+    	</div>
+    </div>
+          </div>
+        </div>
+      </div>
     </div>
   </nav>
     <!-- Optional JavaScript -->
@@ -68,135 +202,237 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
     <div class="container">
       <div class="card-group">
           <!-- card 1 of row 1  cards need price and names added-->
       <div class="card">
-        <img src="camocoat.jpg" class="card-img-top" alt="...">
+        <img src="nortface.jpg" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">North Face Raincoat</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <h5 class="card-title">The North Face Evolve II Waterproof Men's Jacket, Black</h5>
+          <p class="card-text">Size M.The updated Evolve II from The North Face employs a patented Triclimate® design, combining two zip-in layers to create a 3-in-1 jacket adaptable for use in a variety of climates and activities. Wear the inner fleece or the outer shell alone, or zip them together to form a third jacket ideal for those bitterly cold winter days.
+The versatile jackets sports multiple pockets for all your storage needs, an adjustable hood, brushed collar lining as well as adjustable cuffs and cinch cord hem.
+The fleece liner is made from Polartec® Classic 100 fabric, which wicks sweat effortlessly away from the skin.
+Both waterproof and windproof, the HyVent® shell is extremely durable against all kinds of wear and tear.</p>
         </div>
         <div class="card-footer">
-          Quantity: <input id="inbox"><button type="button my-4 my-lg-0" class="btn btn-primary" onclick="save();">Add to cart</button>
+          <button type="button my-4 my-lg-0" onClick="item1()" class="btn btn-primary">Add to Cart</button>
         </div>
       </div>
         <!-- card 2 of row 1 -->
       <div class="card">
-        <img src="gtx.png" class="card-img-top" alt="...">
+        <img src="ntPants.jpg" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+		  <br>
+          <h5 class="card-title">The North Face Ventacious Cargo Pants</h5>
+          <p class="card-text">Exclusive to out website. Get a fresh look to tackle the outdoors with these men's Ventacious Cargo Pants from The North Face. In navy colourway, these cargo pants are made from durable poly to keep you covered. Perfect for outdoor treks or stylin' up the street, these cargo pants have multiple pockets throughout and a secure waistband for the perfect fit. Finished with white The North Face branding to the left thigh. | Our model is 6'2" and wears a size medium..</p>
         </div>
         <div class="card-footer">
-          Quantity: <input id="inbox" size="10"> <button type="button my-4 my-lg-0" class="btn btn-primary" onclick="save();">Add to cart</button>
+          <button type="button my-4 my-lg-0" onClick="item2()" class="btn btn-primary">Add To Cart</button>
         </div>
       </div>
       <!-- card 3 of row 1 -->
       <div class="card">
-        <img src="gtx.png" class="card-img-top" alt="...">
+        <img src="ntTshirt.jpg" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+		  <br><br><br><br>
+          <h5 class="card-title">Supreme The North Face Metallic Logo T-Shirt Black</h5>
+          <p class="card-text">Size M. For their first collaboration with The North Face in 2018, Supreme went with one singular theme for each piece in the drop. Each and every item, including this t-shirt, was given a reflective metallic effect. This tee features a metallic TNF logo positioned above Supreme's iconic box logo, which is also printed in a metallic material.</p>
         </div>
         <div class="card-footer">
-          Quantity: <input id="inbox" size="10"> <button type="button my-4 my-lg-0" class="btn btn-primary" onclick="save();">Add to cart</button>
+          <button type="button my-4 my-lg-0" onClick="item3()" class="btn btn-primary">Add To Cart</button>
         </div>
       </div>
     </div>
 </div>
-<div class="container">
-  <div class="card-group">
-      <!-- card 1 of row 2 -->
-  <div class="card">
-    <img src="gtx.png" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    </div>
-    <div class="card-footer">
-      Quantity: <input id="inbox" size="10"> <button type="button my-4 my-lg-0" class="btn btn-primary" onclick="save();">Add to cart</button>
-    </div>
-  </div>
-    <!-- card 2 of row 2 -->
-  <div class="card">
-    <img src="gtx.png" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-    </div>
-    <div class="card-footer">
-      Quantity: <input id="inbox" size="10"> <button type="button my-4 my-lg-0" class="btn btn-primary" onclick="save();">Add to cart</button>
-    </div>
-  </div>
-  <!-- card 3 of row 2 -->
-  <div class="card">
-    <img src="gtx.png" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-    </div>
-    <div class="card-footer">
-      Quantity: <input id="inbox" size="10"> <button type="button my-4 my-lg-0" class="btn btn-primary" onclick="save();">Add to cart</button>
-    </div>
-  </div>
-</div>
-</div>
-<!-- row 3 -->
-<div class="container">
-  <div class="card-group">
-      <!-- card 1 of row 3 -->
-  <div class="card">
-    <img src="gtx.png" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    </div>
-    <div class="card-footer">
-      Quantity: <input id="inbox" size="10"> <button type="button my-4 my-lg-0" class="btn btn-primary" onclick="save();">Add to cart</button>
-    </div>
-  </div>
-    <!-- card 2 of row 3 -->
-  <div class="card">
-    <img src="gtx.png" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-    </div>
-    <div class="card-footer">
-      Quantity: <input id="inbox" size="10"> <button type="button my-4 my-lg-0" class="btn btn-primary" onclick="save();">Add to cart</button>
-    </div>
-  </div>
-  <!-- card 3 of row 3 -->
-  <div class="card">
-    <img src="gtx.png" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-    </div>
-    <div class="card-footer">
-      Quantity: <input id="inbox" size="10"> <button type="button my-4 my-lg-0" class="btn btn-primary" onclick="save();">Add to cart</button>
-    </div>
-  </div>
-</div>
-</div>
   </body>
-
-  <script>
-  // this is to save the products into the cart
-  function save()
-      {
-        localStorage.quantity = document.getElementById("inbox").value;
-        localStorage.quantity1 = document.getElementById("inbox1").value;
-        localStorage.quantity2 = document.getElementById("inbox2").value;
-      }
-      function clear1()
-      {
-        localStorage.clear();
-      }
-
-
-
-  </script>
 </html>
+<script>
+function item1(){
+ localStorage.setItem('item1', true);
+  alert("Item was successfully added to cart. Thank you!");
+}
+function item2(){
+ localStorage.setItem('item2', true);
+  alert("Item was successfully added to cart. Thank you!");
+}
+function item3(){
+ localStorage.setItem('item3', true);
+  alert("Item was successfully added to cart. Thank you!");
+}
+
+let permissionToStart = localStorage.getItem('logStarter');//checking variable for null
+permissionToStart = JSON.parse(permissionToStart);
+
+let permissionToStart2 = localStorage.getItem('regStarter');
+permissionToStart2 = JSON.parse(permissionToStart2);
+if(permissionToStart == null || permissionToStart2 == null){ //if its null will put the checkstarter to false
+	let start = {checkStarter: false} //when registred setting logginchecker to false into local storage
+	localStorage.setItem("starter", JSON.stringify(start));
+}
+else{ // will put the checkstarter to true
+	let start = {checkStarter: true} //when registred setting logginchecker to false into local storage
+	localStorage.setItem("starter", JSON.stringify(start));
+}
+let getStarter = localStorage.getItem('starter'); // getting information from the local storage
+getStarter = JSON.parse(getStarter);
+
+<!-- Register array creation and button for event listener -->
+let account = [];
+const registerButton = document.getElementById("addder");
+
+<!-- Loggin details validation button for event listner and function for to check if the details match the database-->
+const button = document.getElementById("checker");
+let itemName = localStorage.getItem('account');
+itemName = JSON.parse(itemName);
+document.getElementById("logInButton").style.right = "125px";//moving div element to the right
+document.getElementById("registerButton").style.right = "12px"; //moving the div element to the left
+let hideLoginButton = "none";
+hideLoginButton = document.getElementById('logInButton'); // link the hideLoginButton to logInButton id
+let hideRegisterButton = "none";
+hideRegisterButton = document.getElementById('registerButton'); // link the hideRegisterButton to hideRegisterButton id
+let profileButton = "none";
+profileButton = document.getElementById('profile'); // link the profileButton to profileButton id
+let userLogOutButton = "none";
+userLogOutButton = document.getElementById('logOut'); // link the userLogOutButton to userLogOutButton id
+userLogOutButton.style.visibility = 'hidden'; //hiding the button
+profileButton.style.visibility = 'hidden';
+if(getStarter.checkStarter == true){
+	let check = JSON.parse(localStorage.checkLoggin);//cloning the data for checkloggin from the local storage
+	let getPosition = localStorage.getItem('counter');
+	getPosition = JSON.parse(getPosition);
+	let getcounter = getPosition.possition;
+
+if(check.logginChecker == true ){ //checking if its true it will hide the loggin button
+	hideLoginButton.style.visibility = 'hidden';
+	hideRegisterButton.style.visibility = 'hidden';
+	profileButton.style.visibility = 'visible';
+	userLogOutButton.style.visibility = 'visible';
+	document.getElementById("firstName").value = itemName[getcounter].fName;
+	document.getElementById("lastName").value = itemName[getcounter].lName;
+	document.getElementById("userEmail").value = itemName[getcounter].email;
+	document.getElementById("userPassword").value = itemName[getcounter].password;
+}
+else{//if its not true it will leave it visible
+	hideLoginButton.style.visibility = 'visible';
+	hideRegisterButton.style.visibility = 'visible';
+	profileButton.style.visibility = 'hidden';
+	userLogOutButton.style.visibility = 'hidden';
+}
+
+}
+button.addEventListener("click", function() { //event listener when its clicked to activate the function
+	let loggin = {logginChecker: false}
+	localStorage.checkLoggin = JSON.stringify(loggin);
+    let email = document.getElementById('inputEmail').value;
+    let password = document.getElementById('inputPassword').value;
+	let found = false;
+    let entriesJSON = localStorage.getItem('account');// copy the data from local storage that was stored in account
+    if (!entriesJSON) { //if there is no data output and error
+        alert("Nothing stored!");
+        return;
+    }
+    let allEntries = JSON.parse(entriesJSON);
+    for (let i = 0; i < allEntries.length; i++) {// loop to validate username and password from the account table
+        let entry = allEntries[i];
+        let storedUserName = entry.email;
+        let storedPassWord = entry.password;
+        let storedEmailAddress = entry.email;
+		if (email == storedUserName && password == storedPassWord) { //checking if the username that was typed match the information stored in the account
+			let counter = {possition: i}
+			localStorage.counter = JSON.stringify(counter);
+            alert("Successfully logged in!");
+			let loggin = {logginChecker: true} // rewrite the logginChekcer to true
+			localStorage.checkLoggin = JSON.stringify(loggin);
+			found = true;
+			hideLoginButton.style.visibility = 'hidden';
+			window.location.reload()
+			let start = {checkStarter: true} //when registred setting logginchecker to false into local storage
+			localStorage.setItem("logStarter", JSON.stringify(start));
+            return;
+        }
+		else {
+			found = false; // if its not a match it will set the boolean to false so we can output it as an error later
+		}
+	}
+	if(found == false){// if the match wasn't succsessfull it will output and error to try again
+	alert('Invalid Username or Password! Please try again.');
+	}
+})
+
+
+registerButton.addEventListener("click", function() {
+
+
+	 // Parse any JSON previously stored in allEntries
+	let loggin = {logginChecker: false} //when registred setting logginchecker to false into local storage
+	localStorage.setItem("checkLoggin", JSON.stringify(loggin));
+	let start = {checkStarter: true} //when registred setting logginchecker to true into local storage
+	localStorage.setItem("regStarter", JSON.stringify(start));
+    let existingEntries = JSON.parse(localStorage.getItem("account")); //parsing the existingEntries from the account in local storage
+    if(existingEntries == null) existingEntries = []; // if its null it creating an object
+	let firstName = document.getElementById("first_name");//creating an variable to take information from the input box
+	let lastName = document.getElementById("last_name");
+	let userEmail = document.getElementById("email");
+	let userPassword = document.getElementById("password");
+    let entry = {
+        fName: firstName.value,
+		lName: lastName.value,
+		email: userEmail.value,
+		password: userPassword.value
+    }; // storing the information into an aray
+	if (entry.fName === "" || entry.lName === ""  || entry.email === "" || entry.password === ""){// if the field are  empty alerting an error
+	alert("Please fill up all the missing fields")
+	}
+	else{ // otherwise
+		localStorage.setItem("account", JSON.stringify(entry)); // it will take the array and stringify it as an object array
+		existingEntries.push(entry); //     // Save allEntries back as an array of the object to local storage
+		localStorage.setItem("account", JSON.stringify(existingEntries));
+		alert("You have been successfully registred. You can Log in now. Thanks you!")
+	}
+
+})
+
+const logOutButton = document.getElementById("logOut");
+
+logOutButton.addEventListener("click", function() {//event listener with function to set the loginchecker to false and reload the page
+	 // Parse any JSON previously stored in allEntries
+	let loggin = {logginChecker: false} // rewrite the logginChekcer to false;
+	localStorage.checkLoggin = JSON.stringify(loggin);
+	location.reload();//reloading the page
+})
+
+const userEdit = document.getElementById("editer");
+
+userEdit.addEventListener("click", function() { //event listener when its clicked to activate the function
+    //let existingEntries = JSON.parse(localStorage.getItem("account")); //parsing the existingEntries from the account in local storage
+	let getPosition = localStorage.getItem('counter');
+	getPosition = JSON.parse(getPosition);
+
+	let getcounter = getPosition.possition;
+	let existingEntries = localStorage.getItem('account');
+		existingEntries = JSON.parse(existingEntries);
+    if(existingEntries == null) existingEntries = []; // if its null it creating an object
+	let firstName = document.getElementById("firstName");//creating an variable to take information from the input box
+	let lastName = document.getElementById("lastName");
+	let userEmail = document.getElementById("userEmail");
+	let userPassword = document.getElementById("newPassword");
+    let entry = {
+        fName: firstName.value,
+		lName: lastName.value,
+		email: userEmail.value,
+		password: userPassword.value
+    }; // storing the information into an aray
+	if (entry.fName === "" || entry.lName === ""  || entry.email === "" || entry.password === ""){// if the field are  empty alerting an error
+	alert("Please fill up all the missing fields")
+	}
+	else{ // otherwise
+		localStorage.setItem("account", JSON.stringify(entry)); // it will take the array and stringify it as an object array
+		existingEntries[getcounter].fName = firstName.value;
+		existingEntries[getcounter].lName = lastName.value;
+		existingEntries[getcounter].email = userEmail.value;
+		existingEntries[getcounter].password = userPassword.value;
+		localStorage.setItem("account", JSON.stringify(existingEntries));
+		alert("You have been successfully Changed them.")
+	}
+})
+</script>
