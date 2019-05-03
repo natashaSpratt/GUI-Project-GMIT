@@ -6,7 +6,7 @@
   height:640;
   width:360;
   }
-    .product_view .modal-dialog{max-width: 800px; width: 100%;}
+  .product_view .modal-dialog{max-width: 800px; width: 100%;}
 	.pre-cost{text-decoration: line-through; color: #a5a5a5;}
 	.space-ten{padding: 10px 0;}
   </style>
@@ -19,201 +19,212 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+    <!--link to stylesheet css-->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
     <title></title>
   </head>
   <body>
     <!-- Nav Bar  -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="index.html">Home Page</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <!-- Nav Bar Collapse menu -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <!-- Nav Bar  dropdown Menu for products -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Shop</a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="clothing.html">Clothing</a>
-            <a class="dropdown-item" href="sports.html">Sports</a>
-            <a class="dropdown-item" href="accessories.html">Accessories</a>
+    <nav class="navbar navbar-expand-lg nav-custom">
+      <a class="navbar-brand" href="#">Home Page</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Nav Bar Collapse menu -->
+      <div class="collapse navbar-collapse " id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <!-- Nav Bar  dropdown Menu for products -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Shop</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="clothing.html">Clothing</a>
+                <a class="dropdown-item" href="sports.html">Sports</a>
+                <a class="dropdown-item" href="accessories.html">Accessories</a>
+              </div>
+            </li>
+            <!--Navbar link to Cart -->
+            <li class="nav-item">
+              <a class="nav-link" href="cart.html"><i class="fas fa-shopping-basket"></i>   Cart</a>
+            </li>
+          </ul>
+
+          <div>
+            <!--Login button -->
+            <button id="logInButton"type="button my-4 my-lg-0" class="btn btn-primary custom-btn" data-toggle = "modal" data-target = "#loginModal"><i class="fas fa-unlock"></i>    Login</button>
+            <!--Register button -->
+            <button id="registerButton"type="button my-4 my-lg-0" class="btn btn-primary custom-btn" data-toggle = "modal" data-target = "#registerModal"><i class="fas fa-unlock"></i>    Register</button>
+            <!-- Profile Button-->
+            <button id="profile"type="button my-4 my-lg-0" class="btn btn-primary custom-btn " data-toggle = "modal" data-target = "#profileEditModal"><i class="fas fa-unlock"></i>    Profile</button>
+            <!-- Log Out Button-->
+            <button id="logOut"type="button my-4 my-lg-0" class="btn btn-primary custom-btn"><i class="fas fa-unlock"></i>    LogOut</button>
           </div>
-        </li>
-        <!--Navbar link to Cart -->
-        <li class="nav-item">
-          <a class="nav-link" href="cart.html"><i class="fas fa-shopping-basket"></i>   Cart</a>
-        </li>
-      </ul>
-	  <div>
-		  <!--Login button -->
-		  <button id="logInButton"type="button my-4 my-lg-0" class="btn btn-primary" data-toggle = "modal" data-target = "#loginModal"><i class="fas fa-unlock"></i>    Login</button>
-		  <!--Register button -->
-		  <button id="registerButton"type="button my-4 my-lg-0" class="btn btn-primary " data-toggle = "modal" data-target = "#registerModal"><i class="fas fa-unlock"></i>    Register</button>
-		  <!-- Profile Button-->
-		  <button id="profile"type="button my-4 my-lg-0" class="btn btn-primary " data-toggle = "modal" data-target = "#profileEditModal"><i class="fas fa-unlock"></i>    Profile</button>
-		  <!-- Log Out Button-->
-		  <button id="logOut"type="button my-4 my-lg-0" class="btn btn-primary"><i class="fas fa-unlock"></i>    LogOut</button>
-	  </div>
-      <!-- Modal for login button-->
-      <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="loginModalLabel"><b>Login</b></h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
+
+          <!-- Modal for login button-->
+          <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="loginModalLabel"><b>Login</b></h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <center>
+                    <!-- Login Form  -->
+                    <div class="form-group row">
+                      <label for="email_address" class="col-md-4 col-form-label text-md-right">E-Mail Address</label>
+                      <div class="col-md-6">
+                        <input type="text" id="inputEmail" class="form-control" name="email-address" required autofocus>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
+                      <div class="col-md-6">
+                        <input type="password" id="inputPassword" class="form-control" name="password" required>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <!-- Button or input for login -->
+                      <input type="submit" value="Register">
+                      <button type="submit" id="checker" class="btn btn-primary">Login</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="modal-body">
-              <center>
-                <!-- Login Form  -->
-                <!-- Needs Work  -->
-				 <div class="form-group row">
-					<label for="email_address" class="col-md-4 col-form-label text-md-right">E-Mail Address</label>
-					<div class="col-md-6">
-						<input type="text" id="inputEmail" class="form-control" name="email-address" required autofocus>
-					</div>
-				</div>
-				<div class="form-group row">
-					<label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
-					<div class="col-md-6">
-						<input type="password" id="inputPassword" class="form-control" name="password" required>
-					</div>
-				</div>
-            <div class="modal-footer">
-                <!-- Button or input for login -->
-               <input type="submit" value="Register">
-              <button type="submit" id="checker" class="btn btn-primary">Login</button>
+            <!-- Modal for register button-->
+            <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel"><b>Welcome to Register menu.</b></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="container">
+                      <div class="row centered-form">
+
+                        <div class="panel panel-default">
+                          <div class="panel-heading">
+                            <h3 class="panel-title">Please fill up all of the fields</h3>
+                          </div>
+                          <div class="panel-body">
+                            <form role="form">
+                              <div class="row">
+                                <div class="col-xs-6 col-sm-6 col-md-6">
+                                  <div class="form-group">
+                                    <input type="text" name="first_name" id="first_name" class="form-control input-sm" placeholder="First Name">
+                                  </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-6">
+                                  <div class="form-group">
+                                    <input type="text" name="last_name" id="last_name" class="form-control input-sm" placeholder="Last Name">
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="form-group">
+                                <input type="email" name="email" id="email" class="form-control input-sm" placeholder="Email Address">
+                              </div>
+
+                              <div class="row">
+                                <div class="col-xs-6 col-sm-6 col-md-6">
+                                  <div class="form-group">
+                                    <input type="password" name="password" id="password" class="form-control input-sm" placeholder="Password">
+                                  </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-6">
+                                  <div class="form-group">
+                                    <input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-sm" placeholder="Confirm Password">
+                                  </div>
+                                </div>
+                              </div>
+
+                              <input type="submit" value="Register" id ="addder" class="btn btn-info btn-block">
+
+                            </form>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-	 <!-- Modal for register button-->
-      <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="loginModalLabel"><b>Welcome to Register menu.</b></h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
+            <!-- Modal for Profile button-->
+            <div class="modal fade" id="profileEditModal" tabindex="-1" role="dialog" aria-labelledby="profileEditModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel"><b>Welcome to Profile menu.</b></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="container">
+                      <div class="row centered-form">
+
+                        <div class="panel panel-default">
+                          <div class="panel-heading">
+                            <h3 class="panel-title">You can change all the field by filling it up and clicking the button edit</h3>
+                          </div>
+                          <div class="panel-body">
+                            <form role="form">
+                              <div class="row">
+                                <div class="col-xs-6 col-sm-6 col-md-6">
+                                  <div class="form-group">
+                                    <input type="text" name="first_name" id="firstName" class="form-control input-sm" placeholder="First Name">
+                                  </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-6">
+                                  <div class="form-group">
+                                    <input type="text" name="last_name" id="lastName" class="form-control input-sm" placeholder="Last Name">
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="form-group">
+                                <input type="email" name="email" id="userEmail" class="form-control input-sm" placeholder="Email Address">
+                              </div>
+
+                              <div class="row">
+                                <div class="col-xs-6 col-sm-6 col-md-6">
+                                  <div class="form-group">
+                                    <input type="password" name="password" id="userPassword" class="form-control input-sm" placeholder="Password">
+                                  </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-6">
+                                  <div class="form-group">
+                                    <input type="password" name="password_confirmation" id="newPassword" class="form-control input-sm" placeholder="New Password">
+                                  </div>
+                                </div>
+                              </div>
+
+                              <input type="submit" value="Edit" id ="editer" class="btn btn-info btn-block">
+
+                            </form>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="modal-body">
-              <div class="container">
-        <div class="row centered-form">
-        	<div class="panel panel-default">
-        		<div class="panel-heading">
-			    		<h3 class="panel-title">Please fill up all of the fields</h3>
-			 			</div>
-			 			<div class="panel-body">
-			    		<form role="form">
-			    			<div class="row">
-			    				<div class="col-xs-6 col-sm-6 col-md-6">
-			    					<div class="form-group">
-			                <input type="text" name="first_name" id="first_name" class="form-control input-sm" placeholder="First Name">
-			    					</div>
-			    				</div>
-			    				<div class="col-xs-6 col-sm-6 col-md-6">
-			    					<div class="form-group">
-			    						<input type="text" name="last_name" id="last_name" class="form-control input-sm" placeholder="Last Name">
-			    					</div>
-			    				</div>
-			    			</div>
-			    			<div class="form-group">
-			    				<input type="email" name="email" id="email" class="form-control input-sm" placeholder="Email Address">
-			    			</div>
-
-			    			<div class="row">
-			    				<div class="col-xs-6 col-sm-6 col-md-6">
-			    					<div class="form-group">
-			    						<input type="password" name="password" id="password" class="form-control input-sm" placeholder="Password">
-			    					</div>
-			    				</div>
-			    				<div class="col-xs-6 col-sm-6 col-md-6">
-			    					<div class="form-group">
-			    						<input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-sm" placeholder="Confirm Password">
-			    					</div>
-			    				</div>
-			    			</div>
-
-			    			<input type="submit" value="Register" id ="addder" class="btn btn-info btn-block">
-
-			    		</form>
-			    	</div>
-	    		</div>
-
-    	</div>
-    </div>
-          </div>
-        </div>
-      </div>
-    </div>
-	<!-- Modal for register button-->
-      <div class="modal fade" id="profileEditModal" tabindex="-1" role="dialog" aria-labelledby="profileEditModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="loginModalLabel"><b>Welcome to Profile menu.</b></h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <div class="container">
-        <div class="row centered-form">
-        	<div class="panel panel-default">
-        		<div class="panel-heading">
-			    		<h3 class="panel-title">You can change all the field by filling it up and clicking the button edit</h3>
-			 			</div>
-			 			<div class="panel-body">
-			    		<form role="form">
-			    			<div class="row">
-			    				<div class="col-xs-6 col-sm-6 col-md-6">
-			    					<div class="form-group">
-			                <input type="text" name="first_name" id="firstName" class="form-control input-sm" placeholder="First Name">
-			    					</div>
-			    				</div>
-			    				<div class="col-xs-6 col-sm-6 col-md-6">
-			    					<div class="form-group">
-			    						<input type="text" name="last_name" id="lastName" class="form-control input-sm" placeholder="Last Name">
-			    					</div>
-			    				</div>
-			    			</div>
-
-			    			<div class="form-group">
-			    				<input type="email" name="email" id="userEmail" class="form-control input-sm" placeholder="Email Address">
-			    			</div>
-			    			<div class="row">
-			    				<div class="col-xs-6 col-sm-6 col-md-6">
-			    					<div class="form-group">
-			    						<input type="password" name="password" id="userPassword" class="form-control input-sm" placeholder="Password">
-			    					</div>
-			    				</div>
-			    				<div class="col-xs-6 col-sm-6 col-md-6">
-			    					<div class="form-group">
-			    						<input type="password" name="password_confirmation" id="newPassword" class="form-control input-sm" placeholder="New Password">
-			    					</div>
-			    				</div>
-			    			</div>
-			    			<input type="submit" value="Edit" id ="editer" class="btn btn-info btn-block">
-			    		</form>
-			    	</div>
-	    		</div>
-
-    	</div>
-    </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </nav>
-<!------ Include the above in your HEAD tag ---------->
+          </nav>
+<!-- Include the above in your HEAD tag ---------->
 <!---Container for the cart + scritpt that is used taken from fontawesome  ref link for the code https://bootsnipp.com/snippets/35e4p -->
 <div class="container">
    <div class="card shopping-cart">
