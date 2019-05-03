@@ -225,7 +225,7 @@
 		</div>
 		<div id="showError">
 		 <div class="card-body" id="cart">
-				<!-- PRODUCT -->	
+				<!-- PRODUCT -->
 				<div class="row" id="item1">
 					<div class="col-12 col-sm-12 col-md-2 text-center">
 							<img class="img-responsive" src="nortface.jpg" alt="prewiew" width="120" height="80">
@@ -463,7 +463,7 @@
 						</div>
 					</div>
 				  <hr>
-				</div>	
+				</div>
 				<!-- END PRODUCT -->
 				<!-- PRODUCT -->
 				<div class="row" id="item9">
@@ -493,8 +493,8 @@
 						</div>
 					</div>
 					<hr>
-				</div>		
-				<!-- END PRODUCT -->			
+				</div>
+				<!-- END PRODUCT -->
 		 </div>
 		</div>
 		<div class="card-footer" id="cartCheckout">
@@ -511,10 +511,10 @@
 			<div class="pull-right" style="margin: 10px">
 				<a onclick="resetCart()" href="" class="btn btn-success pull-right">Checkout</a>
 				<div id="totalPrice" class="pull-right" style="margin: 5px">
-					
+
 				</div>
 			</div>
-		</div>		
+		</div>
 	</div>
 </div>
     <!-- Optional JavaScript -->
@@ -530,7 +530,7 @@ let hideCardIfEmpty = "none";
 hideCardIfEmpty = document.getElementById('cart'); // link the hideCardIfEmpty to cart id
 hideCardIfEmpty.style.visibility = 'visible';
 let hideCardIfEmptyCheckOut = "none";
-hideCardIfEmptyCheckOut = document.getElementById('cartCheckout'); // link the hideRegisterButton to hideRegisterButton id	
+hideCardIfEmptyCheckOut = document.getElementById('cartCheckout'); // link the hideRegisterButton to hideRegisterButton id
 let discount = false;
 let discountCheck = "discount10";
 let removeitem1,removeitem2,removeitem3,removeitem4,removeitem5,removeitem6,removeitem7,removeitem8,removeitem9 = "none";
@@ -554,7 +554,7 @@ item6 = JSON.parse(localStorage.getItem('item6'));
 item7 = JSON.parse(localStorage.getItem('item7'));
 item8 = JSON.parse(localStorage.getItem('item8'));
 item9 = JSON.parse(localStorage.getItem('item9'));//finishing with the parsing
-startCart();//function to start the cart 
+startCart();//function to start the cart
 function couponChecker(){
 	let takeCoupon = document.getElementById("couponCheck").value;
 	if(discountCheck == takeCoupon){
@@ -583,9 +583,9 @@ let priceItem7 = 36.99;
 let priceItem8 = 15.99;
 let priceItem9 = 29.99;
 let calculation = 0;
-let quantityItem1,quantityItem2,quantityItem3,quantityItem4,quantityItem5,quantityItem6,quantityItem7,quantityItem8,quantityItem9 = 1;    
-if(item1 == false){ // checking if the item on is select if not it will remove the entire div 
-	if(removeitem1.parentElement){//checking if there is a element 
+let quantityItem1,quantityItem2,quantityItem3,quantityItem4,quantityItem5,quantityItem6,quantityItem7,quantityItem8,quantityItem9 = 1;
+if(item1 == false){ // checking if the item on is select if not it will remove the entire div
+	if(removeitem1.parentElement){//checking if there is a element
 		removeitem1.parentElement.removeChild(removeitem1); //removing the div
 		priceItem1 = 0;
 	}
@@ -594,24 +594,24 @@ else{// otherwise it will calculate the total
 	quantityItem1 = document.getElementById("quantity1").value;
 	calculation = priceItem1 * quantityItem1; // calculating the total
 }
-if(item2 == false){// checking if the item on is select if not it will remove the entire div 
-	if(removeitem2.parentElement){//checking if there is a element 
+if(item2 == false){// checking if the item on is select if not it will remove the entire div
+	if(removeitem2.parentElement){//checking if there is a element
 		removeitem2.parentElement.removeChild(removeitem2);//removing the div
 		priceItem2 = 0;
 	}
 }
 else{
-	quantityItem2 = document.getElementById("quantity2").value; 
+	quantityItem2 = document.getElementById("quantity2").value;
 	calculation = calculation + (priceItem2 * quantityItem2);// calculating the total
 }
 if(item3 == false){
-	if(removeitem3.parentElement){//checking if there is a element 
+	if(removeitem3.parentElement){//checking if there is a element
 		removeitem3.parentElement.removeChild(removeitem3);
 		priceItem3 = 0;
 	}
 }
 else{
-	quantityItem3 = document.getElementById("quantity3").value; 
+	quantityItem3 = document.getElementById("quantity3").value;
 	calculation = calculation + (priceItem3 * quantityItem3);// calculating the total
 }
 if(item4 == false){
@@ -621,7 +621,7 @@ if(item4 == false){
 	}
 }
 else{
-	quantityItem4 = document.getElementById("quantity3").value; 
+	quantityItem4 = document.getElementById("quantity3").value;
 	calculation = calculation + (priceItem4 * quantityItem4);// calculating the total
 }
 if(item5 == false){
@@ -631,7 +631,7 @@ if(item5 == false){
 	}
 }
 else{
-	quantityItem5 = document.getElementById("quantity3").value; 
+	quantityItem5 = document.getElementById("quantity3").value;
 	calculation = calculation + (priceItem5 * quantityItem5);// calculating the total
 }
 if(item6 == false){
@@ -641,7 +641,7 @@ if(item6 == false){
 	}
 }
 else{
-	quantityItem6 = document.getElementById("quantity3").value; 
+	quantityItem6 = document.getElementById("quantity3").value;
 	calculation = calculation + (priceItem6 * quantityItem6);// calculating the total
 }
 if(item7 == false){
@@ -651,7 +651,7 @@ if(item7 == false){
 	}
 }
 else{
-	quantityItem7 = document.getElementById("quantity3").value; 
+	quantityItem7 = document.getElementById("quantity3").value;
 	calculation = calculation + (priceItem7 * quantityItem7);// calculating the total
 }
 if(item8 == false){
@@ -661,7 +661,7 @@ if(item8 == false){
 	}
 }
 else{
-	quantityItem8 = document.getElementById("quantity3").value; 
+	quantityItem8 = document.getElementById("quantity3").value;
 	calculation = calculation + (priceItem8 * quantityItem8);// calculating the total
 }
 if(item9 == false){
@@ -671,7 +671,7 @@ if(item9 == false){
 	}
 }
 else{
-	quantityItem9 = document.getElementById("quantity3").value; 
+	quantityItem9 = document.getElementById("quantity3").value;
 	calculation = calculation + (priceItem9 * quantityItem9);// calculating the total
 }
 if (discount == true){
@@ -738,7 +738,7 @@ removeitem9.parentElement.removeChild(removeitem9);
 localStorage.setItem('item9', false);
 }
 
-let permissionToStart = localStorage.getItem('logStarter');//checking variable for null 
+let permissionToStart = localStorage.getItem('logStarter');//checking variable for null
 permissionToStart = JSON.parse(permissionToStart);
 
 let permissionToStart2 = localStorage.getItem('regStarter');
@@ -750,7 +750,7 @@ if(permissionToStart == null || permissionToStart2 == null){ //if its null will 
 else{ // will put the checkstarter to true
 	let start = {checkStarter: true} //when registred setting logginchecker to false into local storage
 	localStorage.setItem("starter", JSON.stringify(start));
-}	
+}
 let getStarter = localStorage.getItem('starter'); // getting information from the local storage
 getStarter = JSON.parse(getStarter);
 
@@ -765,13 +765,13 @@ itemName = JSON.parse(itemName);
 document.getElementById("logInButton").style.right = "125px";//moving div element to the right
 document.getElementById("registerButton").style.right = "12px"; //moving the div element to the left
 let hideLoginButton = "none";
-hideLoginButton = document.getElementById('logInButton'); // link the hideLoginButton to logInButton id 
+hideLoginButton = document.getElementById('logInButton'); // link the hideLoginButton to logInButton id
 let hideRegisterButton = "none";
 hideRegisterButton = document.getElementById('registerButton'); // link the hideRegisterButton to hideRegisterButton id
 let profileButton = "none";
-profileButton = document.getElementById('profile'); // link the profileButton to profileButton id 
+profileButton = document.getElementById('profile'); // link the profileButton to profileButton id
 let userLogOutButton = "none";
-userLogOutButton = document.getElementById('logOut'); // link the userLogOutButton to userLogOutButton id  
+userLogOutButton = document.getElementById('logOut'); // link the userLogOutButton to userLogOutButton id
 userLogOutButton.style.visibility = 'hidden'; //hiding the button
 profileButton.style.visibility = 'hidden';
 if(getStarter.checkStarter == true){
@@ -791,7 +791,7 @@ if(check.logginChecker == true ){ //checking if its true it will hide the loggin
 	document.getElementById("userPassword").value = itemName[getcounter].password;
 }
 else{//if its not true it will leave it visible
-	hideLoginButton.style.visibility = 'visible'; 
+	hideLoginButton.style.visibility = 'visible';
 	hideRegisterButton.style.visibility = 'visible';
 	profileButton.style.visibility = 'hidden';
 	userLogOutButton.style.visibility = 'hidden';
@@ -804,7 +804,7 @@ button.addEventListener("click", function() { //event listener when its clicked 
     let email = document.getElementById('inputEmail').value;
     let password = document.getElementById('inputPassword').value;
 	let found = false;
-    let entriesJSON = localStorage.getItem('account');// copy the data from local storage that was stored in account 
+    let entriesJSON = localStorage.getItem('account');// copy the data from local storage that was stored in account
     if (!entriesJSON) { //if there is no data output and error
         alert("Nothing stored!");
         return;
@@ -826,11 +826,11 @@ button.addEventListener("click", function() { //event listener when its clicked 
 			window.location.reload()
 			let start = {checkStarter: true} //when registred setting logginchecker to false into local storage
 			localStorage.setItem("logStarter", JSON.stringify(start));
-            return;			
+            return;
         }
 		else {
 			found = false; // if its not a match it will set the boolean to false so we can output it as an error later
-		} 
+		}
 	}
 	if(found == false){// if the match wasn't succsessfull it will output and error to try again
 		alert('Invalid Username or Password! Please try again.');
@@ -859,8 +859,8 @@ registerButton.addEventListener("click", function() {
 	if (entry.fName === "" || entry.lName === ""  || entry.email === "" || entry.password === ""){// if the field are  empty alerting an error
 		alert("Please fill up all the missing fields")
 	}
-	else{ // otherwise 
-		localStorage.setItem("account", JSON.stringify(entry)); // it will take the array and stringify it as an object array 
+	else{ // otherwise
+		localStorage.setItem("account", JSON.stringify(entry)); // it will take the array and stringify it as an object array
 		existingEntries.push(entry); //     // Save allEntries back as an array of the object to local storage
 		localStorage.setItem("account", JSON.stringify(existingEntries));
 		alert("You have been successfully registred. You can Log in now. Thanks you!")
@@ -882,8 +882,8 @@ userEdit.addEventListener("click", function() { //event listener when its clicke
     //let existingEntries = JSON.parse(localStorage.getItem("account")); //parsing the existingEntries from the account in local storage
 	let getPosition = localStorage.getItem('counter');
 	getPosition = JSON.parse(getPosition);
-	
-	let getcounter = getPosition.possition;	
+
+	let getcounter = getPosition.possition;
 	let existingEntries = localStorage.getItem('account');
 		existingEntries = JSON.parse(existingEntries);
     if(existingEntries == null) existingEntries = []; // if its null it creating an object
@@ -900,14 +900,14 @@ userEdit.addEventListener("click", function() { //event listener when its clicke
 	if (entry.fName === "" || entry.lName === ""  || entry.email === "" || entry.password === ""){// if the field are  empty alerting an error
 		alert("Please fill up all the missing fields")
 	}
-	else{ // otherwise 
-	   localStorage.setItem("account", JSON.stringify(entry)); // it will take the array and stringify it as an object array 
+	else{ // otherwise
+	   localStorage.setItem("account", JSON.stringify(entry)); // it will take the array and stringify it as an object array
 		existingEntries[getcounter].fName = firstName.value;
 		existingEntries[getcounter].lName = lastName.value;
 		existingEntries[getcounter].email = userEmail.value;
 		existingEntries[getcounter].password = userPassword.value;
 		localStorage.setItem("account", JSON.stringify(existingEntries));
 		alert("You have been successfully Changed them.")
-	}	
+	}
 })
 </script>
