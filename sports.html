@@ -229,7 +229,7 @@
           <p class="card-text">Disrupt the match with these Puma Future 19.1 football boots. These men’s football boots offer flexible support and an excellent fit to help you smash your opponents on the pitch. These boots are designed for play on soft, muddy pitches.</p>
         </div>
         <div class="card-footer">
-          <button type="button my-4 my-lg-0" onClick="item4()" class="btn btn-primary">Add to Cart</button>
+          <button type="button my-4 my-lg-0" onClick="item4()" class="btn btn-primary  custom-btn">Add to Cart</button>
         </div>
       </div>
         <!-- card 2 of row 1 -->
@@ -240,7 +240,7 @@
           <p class="card-text">Fit, touch and traction get a massive upgrade. Command the match with Nike’s Tiempo Legend Academy football boots. This edition features soft calf leather on the vamp, paired with plush interior quilting for incredible touch. Finished with a firm ground stud configuration for excellent traction on natural grass pitches.</p>
         </div>
         <div class="card-footer">
-          <button type="button my-4 my-lg-0" onClick="item5()" class="btn btn-primary">Add To Cart</button>
+          <button type="button my-4 my-lg-0" onClick="item5()" class="btn btn-primary custom-btn">Add To Cart</button>
         </div>
       </div>
       <!-- card 3 of row 1 -->
@@ -251,7 +251,7 @@
           <p class="card-text">Get exceptional ball touch in these juniors' Stealth Ops Mercurial Vapor Club MG football boots from Nike; ideal for those playing at club level. Built with a durable, synthetic upper in a slick black colourway, they're equipped with a cushioned sockliner and come sat on a multi-ground sole plate, with studs that excel mutiple pitch types. Finished with Swoosh branding to the toe box and Mercurial branding to the heel in a subtle design.</p>
         </div>
         <div class="card-footer">
-          <button type="button my-4 my-lg-0" onClick="item6() "class="btn btn-primary">Add To Cart</button>
+          <button type="button my-4 my-lg-0" onClick="item6() "class="btn btn-primary  custom-btn">Add To Cart</button>
         </div>
       </div>
     </div>
@@ -288,11 +288,11 @@ else{ // will put the checkstarter to true
 let getStarter = localStorage.getItem('starter'); // getting information from the local storage
 getStarter = JSON.parse(getStarter);
 
-<!-- Register array creation and button for event listener -->
+//Register array creation and button for event listener
 let account = [];
 const registerButton = document.getElementById("addder");
 
-<!-- Loggin details validation button for event listner and function for to check if the details match the database-->
+//<!-- Loggin details validation button for event listner and function for to check if the details match the database-->
 const button = document.getElementById("checker");
 let itemName = localStorage.getItem('account');
 itemName = JSON.parse(itemName);
