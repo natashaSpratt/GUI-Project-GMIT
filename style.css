@@ -38,9 +38,11 @@ a.link-linkbar:hover{ color: white;}
 .carousel-item{max-height: 600px;}
 /*max height for card right*/
 
+/*custom card for button on right card*/
 .custom-card-btn{width: 100%;}
+
 .image{
-background: black;
+background: white;
 height: 180px;
 }
 /*img{

@@ -521,6 +521,36 @@
       }
     })
 
+    //--Trying to randomly change the images on the  carousel-
+    var x = document.getElementsByClassName("");
+var randomIndex = new Array();
+
+function shuffle() {
+    for(i=0; i<x.length; i++){
+        randomIndex.push(i);
+    }
+
+    //http://stackoverflow.com/a/18650169/1582080
+    randomIndex.sort(function() {
+        return .5-Math.random();
+    });
+}
+
+function carousel() {
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[randomIndex[myIndex-1]].style.display = "block";
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+
+var myIndex = Math.floor(Math.random()*x.length);
+shuffle();
+carousel();
+
 
 
     </script>
