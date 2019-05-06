@@ -18,8 +18,6 @@
 
   <!--link to stylesheet css-->
   <link rel="stylesheet" type="text/css" href="style.css" />
-    <!--link to google fonts-->
-  <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
 
   <title>Home Page</title>
 
@@ -27,22 +25,24 @@
 <body>
   <!-- Nav Bar  -->
   <nav class="navbar navbar-expand-lg nav-custom">
-    <a class="navbar-brand" href="index.html">GM STYLE</a>
+    <a class="navbar-brand" href="#">Home Page</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <!-- Nav Bar Collapse menu -->
     <div class="collapse navbar-collapse " id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
         <!-- Nav Bar  dropdown Menu for products -->
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Shop</a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="clothing.html">Clothing</a>
-              <a class="dropdown-item" href="sports.html">Sports</a>
-              <a class="dropdown-item" href="accessories.html">Accessories</a>
               <a class="dropdown-item" href="Bags.html">Bags</a>
+              <a class="dropdown-item" href="accessories.html">Accessories</a>
             </div>
           </li>
           <!--Navbar link to Cart -->
@@ -160,7 +160,8 @@
             </div>
           </div>
           <!-- Modal for Profile button-->
-          <div class="modal fade" id="profileEditModal" tabindex="-1" role="dialog" aria-labelledby="profileEditModalLabel" aria-hidden="true">
+          <div class="modal fade" id="profileEditModal" tabindex="-1" role="dialog" aria-labelledby="profileEditModalLabel"
+            aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
@@ -172,7 +173,7 @@
                 <div class="modal-body">
                   <div class="container">
                     <div class="row centered-form">
-
+          
                       <div class="panel panel-default">
                         <div class="panel-heading">
                           <h3 class="panel-title">You can change all the field by filling it up and clicking the button edit</h3>
@@ -182,45 +183,51 @@
                             <div class="row">
                               <div class="col-xs-6 col-sm-6 col-md-6">
                                 <div class="form-group">
-                                  <input type="text" name="first_name" id="firstName" class="form-control input-sm" placeholder="First Name">
+                                  <input type="text" name="first_name" id="firstName" class="form-control input-sm"
+                                    placeholder="First Name">
                                 </div>
                               </div>
                               <div class="col-xs-6 col-sm-6 col-md-6">
                                 <div class="form-group">
-                                  <input type="text" name="last_name" id="lastName" class="form-control input-sm" placeholder="Last Name">
+                                  <input type="text" name="last_name" id="lastName" class="form-control input-sm"
+                                    placeholder="Last Name">
                                 </div>
                               </div>
                             </div>
-
+          
                             <div class="form-group">
-                              <input type="email" name="email" id="userEmail" class="form-control input-sm" placeholder="Email Address">
+                              <input type="email" name="email" id="userEmail" class="form-control input-sm"
+                                placeholder="Email Address">
                             </div>
-
+          
                             <div class="row">
                               <div class="col-xs-6 col-sm-6 col-md-6">
                                 <div class="form-group">
-                                  <input type="password" name="password" id="userPassword" class="form-control input-sm" placeholder="Password">
+                                  <input type="password" name="password" id="userPassword" class="form-control input-sm"
+                                    placeholder="Password">
                                 </div>
                               </div>
                               <div class="col-xs-6 col-sm-6 col-md-6">
                                 <div class="form-group">
-                                  <input type="password" name="password_confirmation" id="newPassword" class="form-control input-sm" placeholder="New Password">
+                                  <input type="password" name="password_confirmation" id="newPassword"
+                                    class="form-control input-sm" placeholder="New Password">
                                 </div>
                               </div>
                             </div>
-
-                            <input type="submit" value="Edit" id ="editer" class="btn btn-info btn-block">
-
+          
+                            <input type="submit" value="Edit" id="editer" class="btn btn-info btn-block">
+          
                           </form>
                         </div>
                       </div>
-
+          
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          <!-- end of profile -->
         </nav>
         <!-- End of Bootstrap Nav Bar  -->
         <!-- Linkbar and information  -->
@@ -245,12 +252,12 @@
         <!-- Container for carousel and images and sidebars  -->
         <div class="row no-gutters">
           <div class="col-lg-3 col-xl-3 col-sm-12 col-xs-12 mx-auto">
-            <div class="card card-right">
-              <img src="climb.jpg" class="card-img-top img-fluid" alt="..." >
+            <div class="card">
+              <img src="images/climb.jpg" class="card-img-top img-fluid" alt="..." >
               <div class="card-body">
-                <h5 class="card-title">Sports and Rec</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, s</p>
-                <a href="sports.html" class="btn btn-primary custom-btn custom-card-btn">Go somewhere</a>
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
               </div>
             </div>
           </div>
@@ -264,21 +271,21 @@
               </ol>
               <div class="carousel-inner">
                 <div class="carousel-item active ">
-                  <img src="bike.jpg" class="d-block " alt="bike helmet image">
+                  <img src="images/bag.jpg" class="d-block w-100" alt="bike helmet image">
                   <div class="carousel-caption d-none d-md-block">
                     <h2>Lorem Ipsum</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
                   </div>
                 </div>
                 <div class="carousel-item">
-                  <img src="clothing.jpg" class="d-block" alt="clothing image">
+                  <img src="images/clothing.jpg" class="d-block w-100" alt="clothing image">
                   <div class="carousel-caption d-none d-md-block">
                     <h2>Lorem Ipsum Second</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
                   </div>
                 </div>
                 <div class="carousel-item">
-                  <img src="Accessories.jpg" class="d-block" alt="accesories image">
+                  <img src="images/accessories.jpg" class="d-block w-100" alt="accesories image">
                   <div class="carousel-caption d-none d-md-block">
                     <h2 style = "color:black">Lorem Ipsum Third</h2>
                     <p  style = "color:black">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
@@ -297,15 +304,14 @@
           </div>
           <!-- Bootstrap Carousel End -->
           <!-- Image links stacked on right-->
-          <div class="image col-lg-3 col-xl-3 col-sm-12 col-xs-12 mx-auto">
-            <a href="accessories.html"><img class="image card-right"  src="persol.jpg" style=""></a>
-            <a href="sport.html"><img class="image card-right"  src="football.jpg" style=""></a>
-            <a href="clothing.html"><img class="image card-right"  src="sportClimb.jpg" style=""></a>
+          <div class="image col-lg-3">
+            <a href="accessories.html"><img class="image img-responsive"  src="persol.jpg" style=""></a>
+            <a href="sport.html"><img class="image img-responsive"  src="football.jpg" style=""></a>
+            <a href="clothing.html"><img class="image img-responsive"  src="sportClimb.jpg" style=""></a>
           </div>
           <!--End of Image links-->
           <!-- Footer -->
-          <div class = "footer col-lg-12 col-xl-12 col-sm-12 col-xs-12 mx-auto">
-          <footer class="footer ">
+          <footer class="footer">
             <!-- Copyright -->
             <div class="footer-copyright">2019 Copyright:
               <a href="https://www.gmit.ie/" class = "footer-link"> GmStyle.com</a>
@@ -314,7 +320,6 @@
 
           </footer>
           <!-- Footer -->
-        </div>
         </div>
 
         <!-- Cantainer For Carousel and Sidebars end-->
@@ -344,10 +349,8 @@
         localStorage.setItem('item9', value); // set the item9
         localStorage.setItem('itemReset', value); // set the item9
       }
-
       let permissionToStart = localStorage.getItem('logStarter');//checking variable for null
       permissionToStart = JSON.parse(permissionToStart);
-
       let permissionToStart2 = localStorage.getItem('regStarter');
       permissionToStart2 = JSON.parse(permissionToStart2);
       if(permissionToStart == null || permissionToStart2 == null){ //if its null will put the checkstarter to false
@@ -360,12 +363,10 @@
       }
       let getStarter = localStorage.getItem('starter'); // getting information from the local storage
       getStarter = JSON.parse(getStarter);
-
-      <!-- Register array creation and button for event listener -->
+      //<!-- Register array creation and button for event listener -->
       let account = [];
       const registerButton = document.getElementById("addder");
-
-      <!-- Loggin details validation button for event listner and function for to check if the details match the database-->
+      //<!-- Loggin details validation button for event listner and function for to check if the details match the database-->
       const button = document.getElementById("checker");
       let itemName = localStorage.getItem('account');
       itemName = JSON.parse(itemName);
@@ -386,7 +387,6 @@
         let getPosition = localStorage.getItem('counter');
         getPosition = JSON.parse(getPosition);
         let getcounter = getPosition.possition;
-
         if(check.logginChecker == true ){ //checking if its true it will hide the loggin button
           hideLoginButton.style.visibility = 'hidden';
           hideRegisterButton.style.visibility = 'hidden';
@@ -403,7 +403,6 @@
           profileButton.style.visibility = 'hidden';
           userLogOutButton.style.visibility = 'hidden';
         }
-
       }
       button.addEventListener("click", function() { //event listener when its clicked to activate the function
         let loggin = {logginChecker: false}
@@ -443,11 +442,7 @@
         alert('Invalid Username or Password! Please try again.');
       }
     })
-
-
     registerButton.addEventListener("click", function() {
-
-
       // Parse any JSON previously stored in allEntries
       let loggin = {logginChecker: false} //when registred setting logginchecker to false into local storage
       localStorage.setItem("checkLoggin", JSON.stringify(loggin));
@@ -474,25 +469,19 @@
         localStorage.setItem("account", JSON.stringify(existingEntries));
         alert("You have been successfully registred. You can Log in now. Thanks you!")
       }
-
     })
-
     const logOutButton = document.getElementById("logOut");
-
     logOutButton.addEventListener("click", function() {//event listener with function to set the loginchecker to false and reload the page
       // Parse any JSON previously stored in allEntries
       let loggin = {logginChecker: false} // rewrite the logginChekcer to false;
       localStorage.checkLoggin = JSON.stringify(loggin);
       location.reload();//reloading the page
     })
-
     const userEdit = document.getElementById("editer");
-
     userEdit.addEventListener("click", function() { //event listener when its clicked to activate the function
       //let existingEntries = JSON.parse(localStorage.getItem("account")); //parsing the existingEntries from the account in local storage
       let getPosition = localStorage.getItem('counter');
       getPosition = JSON.parse(getPosition);
-
       let getcounter = getPosition.possition;
       let existingEntries = localStorage.getItem('account');
       existingEntries = JSON.parse(existingEntries);
@@ -520,7 +509,4 @@
         alert("You have been successfully Changed them.")
       }
     })
-
-
-
     </script>
