@@ -1,0 +1,339 @@
+<doctype html>
+  <html lang="en">
+
+  <head>
+    <link rel="stylesheet" type="text/css" href="myStyle.css" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--Font Awesome link-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <title>Bags</title>
+
+  </head>
+
+  <body>
+    <!-- Nav Bar  -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="index.html">Home Page</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Nav Bar Collapse menu -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <!-- Nav Bar  dropdown Menu for products -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Shop</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="Clothing.html">Clothing</a>
+              <a class="dropdown-item" href="Bags.html">Bags</a>
+              <a class="dropdown-item" href="accerssories.html">Accessories</a>
+            </div>
+          </li>
+          <!--Navbar link to Cart -->
+          <li class="nav-item">
+            <a class="nav-link" href="cart.html"><i class="fas fa-shopping-basket"></i> Cart</a>
+          </li>
+        </ul>
+
+
+        <!--Login button -->
+        <button type="button my-4 my-lg-0" class="btn btn-primary" data-toggle="modal" data-target="#loginModal"><i
+            class="fas fa-unlock"></i> Login</button>
+        <!-- Modal for login button-->
+        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="loginModalLabel"><b>Login</b></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form>
+            </div>
+    </nav>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"></script>
+
+    <div class="container">
+      <!--<div id="test-cards"></div>-->
+      <div id="main"></div>
+      <div id="data-list">
+        <div class="card-group">
+          <!-- card 1 of row 1  cards need price and names added-->
+          <div class="card">
+            <img src="images/bags/toporoverbag.jpg" class="img-fluid" alt="Responsive image">
+            <div class="card-body">
+              <h5 class="card-title">Topo Rover Backpack 15"</h5>
+              <p class="card-text">€124.99</p>
+              <h5 class="card-title">Specs</h5>
+              <p class="card-text"><b>Materials:</b> 400D nylon pack cloth</p>
+              <p class="card-text"><b>Dimensions:</b>27 x 43 x 25cm w/h/d</p>
+              <p class="card-text"><b>Volume:</b>20L</p>
+              <p class="card-text"><b>Weight:</b>2kg</p>
+            </div>
+            <div class="card-footer">
+              Quantity: <input id="bag1" size="10"> <button type="button my-4 my-lg-0" class="btn btn-primary"
+                onclick="userAddCartClick('Topo Rover',document.getElementById('bag1').value);">Add to
+                Cart</button>
+            </div>
+          </div>
+          <!-- card 2 of row 1 -->
+          <div class="card">
+            <img src="images/bags/moveeco.jpg" class="img-fluid" alt="Responsive image"
+              style="width:220px; height:370px;">
+            <div class="card-body">
+              <h5 class="card-title">MOVE 2.0 ECO 15"</h5>
+              <p class="card-text">€95.00</p>
+              <h5 class="card-title">Specs</h5>
+              <p class="card-text"><b>Materials:</b>100% recycled yarn</p>
+              <p class="card-text"><b>Dimensions:</b>27 x 43 x 25cm w/h/d</p>
+              <p class="card-text"><b>Volume:</b>20L</p>
+              <p class="card-text"><b>Weight:</b>3kg</p>
+            </div>
+            <div class="card-footer">
+              Quantity: <input id="bag2" size="10"> <button type="button my-4 my-lg-0" class="btn btn-primary"
+                onclick="userAddCartClick('Move ECO',document.getElementById('bag2').value);">Add to
+                Cart</button>
+            </div>
+          </div>
+          <!-- card 3 of row 1 -->
+          <div class="card">
+            <img src="images/bags/victorinox.jpg" class="img-fluid" alt="Responsive image"
+              style="width:250px; height:350px;">
+            <div class="card-body">
+              <h5 class="card-title">Victorinox Classic Rolltop 15"</h5>
+              <p class="card-text">€99.95</p>
+              <h5 class="card-title">Specs</h5>
+              <p class="card-text"><b>Materials:</b>polyester</p>
+              <p class="card-text"><b>Dimensions:</b>29 x 44 x 15 cm w/h/d</p>
+              <p class="card-text"><b>Volume:</b>20L</p>
+              <p class="card-text"><b>Weight:</b>2kg</p>
+            </div>
+            <div class="card-footer">
+              Quantity: <input id="bag3" size="10"> <button type="button my-4 my-lg-0" class="btn btn-primary"
+                onclick="userAddCartClick('Victorinox Rolltop',document.getElementById('bag3').value);">Add to
+                Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- row 2 of the cards-->
+
+    <div class="container">
+      <div id="data-list">
+        <div class="card-group">
+          <!-- card 1 of row 2 -->
+          <div class="card">
+            <img src="images/bags/commandbag.jpg" class="img-fluid" alt="Responsive image">
+            <div class="card-body">
+              <h5 class="card-title">Command Backpack 15"</h5>
+              <p class="card-text">€150.00</p>
+              <h5 class="card-title">Specs</h5>
+              <p class="card-text"><b>Materials:</b>Softshell</p>
+              <p class="card-text"><b>Dimensions:</b>32 x 44 x 17 cm w/h/d</p>
+              <p class="card-text"><b>Volume:</b>24L</p>
+              <p class="card-text"><b>Weight:</b>2kg</p>
+            </div>
+            <div class="card-footer">
+              Quantity: <input id="bag4" size="10"> <button type="button my-4 my-lg-0" class="btn btn-primary"
+                onclick="userAddCartClick('Command Backpack',document.getElementById('bag4').value);">Add to
+                Cart</button>
+            </div>
+          </div>
+          <!-- card 2 of row 2 -->
+          <div class="card">
+            <img src="images/bags/haroldboston.jpg" class="img-fluid" alt="Responsive image">
+            <div class="card-body">
+              <h5 class="card-title">Harlods Boston laptop bag 15"</h5>
+              <p class="card-text">€100.00</p>
+              <h5 class="card-title">Specs</h5>
+              <p class="card-text"><b>Materials:</b>Leather</p>
+              <p class="card-text"><b>Dimensions:</b>32 x 39 x 10 cm w/h/d</p>
+              <p class="card-text"><b>Volume:</b>15L</p>
+              <p class="card-text"><b>Weight:</b>1.2kg</p>
+            </div>
+            <div class="card-footer">
+              Quantity: <input id="bag5" size="10"> <button type="button my-4 my-lg-0" class="btn btn-primary"
+                onclick="userAddCartClick('Harolds Boston',document.getElementById('bag5').value);">Add to
+                Cart</button>
+            </div>
+          </div>
+          <!-- card 3 of row 2 -->
+          <div class="card">
+            <img src="images/bags/dawson.jpg" class="img-fluid" alt="Responsive image">
+            <div class="card-body">
+              <h5 class="card-title">Dawson Backpack 15"</h5>
+              <p class="card-text">€85.00</p>
+              <h5 class="card-title">Specs</h5>
+              <p class="card-text"><b>Materials:</b>Cotten</p>
+              <p class="card-text"><b>Dimensions:</b>29 x 44 x 22 cm w/h/d</p>
+              <p class="card-text"><b>Volume:</b>20.5L</p>
+              <p class="card-text"><b>Weight:</b>1kg</p>
+            </div>
+            <div class="card-footer">
+              Quantity: <input id="bag6" size="10"> <button type="button my-4 my-lg-0" class="btn btn-primary"
+                onclick="userAddCartClick('Dawsons Backpack',document.getElementById('bag6').value);">Add to
+                Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <!-- row 3 -->
+    <div class="container">
+      <div class="card-group">
+        <!-- card 1 of row 3 -->
+        <div class="card">
+          <img src="images/bags/herschel.jpg" class="img-fluid" alt="Responsive image"
+            style="width:270px; height:320px;">
+          <div class="card-body">
+            <h5 class="card-title">Herschel Retreat Backpack 15"</h5>
+            <p class="card-text">€60.00</p>
+            <h5 class="card-title">Specs</h5>
+            <p class="card-text"><b>Materials:</b>Cotton</p>
+            <p class="card-text"><b>Dimensions:</b>30 x 42 x 15 cm w/h/d</p>
+            <p class="card-text"><b>Volume:</b>20L</p>
+            <p class="card-text"><b>Weight:</b>2kg</p>
+          </div>
+          <div class="card-footer">
+            Quantity: <input id="bag7" size="10"> <button type="button my-4 my-lg-0" class="btn btn-primary"
+              onclick="userAddCartClick('Herschel Retreat',document.getElementById('bag7').value);">Add to
+              Cart</button>
+          </div>
+        </div>
+        <!-- card 2 of row 3 -->
+        <div class="card">
+          <img src="images/bags/razer.jpg" class="img-fluid" alt="Responsive image"
+            style="width:300px; height:320px; margin-top: 50px;">
+          <div class="card-body">
+            <h5 class="card-title">Razer Rouge Backpack 13"</h5>
+            <p class="card-text">€110.00</p>
+            <h5 class="card-title">Specs</h5>
+            <p class="card-text"><b>Materials:</b>Tear and Water resistent Leather</p>
+            <p class="card-text"><b>Dimensions:</b>32 x 39 x 10 cm w/h/d</p>
+            <p class="card-text"><b>Volume:</b>17L</p>
+            <p class="card-text"><b>Weight:</b>3kg</p>
+          </div>
+          <div class="card-footer">
+            Quantity: <input id="bag8" size="8"> <button type="button my-4 my-lg-0" class="btn btn-primary"
+              onclick="userAddCartClick('Razer Rouge',document.getElementById('bag8').value);">Add to
+              Cart</button>
+          </div>
+        </div>
+        <!-- card 3 of row 3-->
+        <div class="card">
+          <img src="images/bags/steelseries.png" class="img-fluid" alt="Responsive image"
+            style="width:370px; height:350px;">
+          <div class="card-body">
+            <h5 class="card-title">Targus X Steelseries Sniper 17.3"</h5>
+            <p class="card-text">€99.99</p>
+            <h5 class="card-title">Specs</h5>
+            <p class="card-text"><b>Materials:</b>Nylon</p>
+            <p class="card-text"><b>Dimensions:</b>35 x 33 x 55 cm w/h/d</p>
+            <p class="card-text"><b>Volume:</b>26L</p>
+            <p class="card-text"><b>Weight:</b>2kg</p>
+            <div class="card-footer">
+              Quantity: <input id="bag9" size="10"> <button type="button my-4 my-lg-0" class="btn btn-primary"
+                onclick="userAddCartClick('Steelseries Sniper',document.getElementById('bag9').value);">Add to
+                Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+  <script>
+
+    function userAddCartClick(productName, quantity) {
+      var product = findBagFromArray(productName);
+      addToCart(product, quantity);
+    }
+
+    function addToCart(product, quantity) {
+      // duplicates
+      var item = { product: product, quantity: quantity };
+      var cartItems = [];
+      var storageItemsString = localStorage.getItem("cart-items");
+      var storageItems = JSON.parse(storageItemsString);
+      if (storageItems != null) {
+        cartItems = storageItems;
+      }
+
+      if (cartItems != null) {
+        if (!duplicateFound(cartItems, item)) {
+          cartItems.push(item);
+          localStorage.setItem("cart-items", JSON.stringify(cartItems));
+        }
+      }
+    }
+
+    // checking if there is a duplicate and if so to add it to a counter and converters it into and int instead of a string
+    function duplicateFound(cartItems, item) {
+      //loop thought each cartItems
+      for (var i = 0; i < cartItems.length; i++) {
+        var cartItem = cartItems[i];
+        if (cartItem.product.bag === item.product.bag) {
+          cartItem.quantity = parseInt(cartItem.quantity) + parseInt(item.quantity);
+          localStorage.setItem("cart-items", JSON.stringify(cartItems));
+          return true;
+        }
+      }
+      return false;
+    }
+
+
+
+    // this fuction is to find the properties in the array and send it to the cart and localStorage
+    function findBagFromArray(bagName) {
+      var bags = [{ imageurl: "images/bags/toporoverbag.jpg", title: "Topo Rover Backpack 15", description: "Perfect for hiking or everyday use.", color: "Blue and Orange", bag: "Topo Rover", price: 124.99, materials: "Nylon Pack Cloth", Dimensions: "27x42x25", Volume: "20L", Weight: "2kg" },
+      { imageurl: "images/bags/moveeco.jpg", title: "Move 2,0 ECO 15", description: "For everyday use working/school", color: "Black", bag: "Move ECO", price: 95.00, materials: "Recycled Yarn", Dimensions: "27x42x25", Volume: "20L", Weight: "3kg" },
+      { imageurl: "images/bags/victorinox.jpg", title: "Victorinox Classic Rolltop 15", description: "Perfect for hiking or everyday use.", color: "Geen and Black", bag: "Victorinox Rolltop", price: 99.95, materials: "Polyester", Dimensions: "29x44x15", Volume: "20L", Weight: "2kg" },
+      { imageurl: "images/bags/commandbag.jpg", title: "Command Backpack 15", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit,", color: "Black", bag: "Command Backpack", price: 150.00, materials: "Softshell", Dimensions: "32x44x17", Volume: "24L", Weight: "2kg" },
+      { imageurl: "images/bags/haroldboston.jpg", title: "Harlods Boston laptop bag 15", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit,", color: "Brown Leather", bag: "Harolds Boston", price: 100.00, materials: "Leather", Dimensions: "32x39x10", Volume: "15L", Weight: "1.3kg" },
+      { imageurl: "images/bags/dawson.jpg", title: "Dawson Backpack 15", description: "asdfdsfs", color: "Cream", bag: "Dawsons Backpack", price: 85.00, materials: "Cotton", Dimensions: "29x44x22", Volume: "20.5L", Weight: "1kg" },
+      { imageurl: "images/bags/herschel.jpg", title: "Herschel Retreat Backpack 15", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit,", color: "Navy", bag: "Herschel Retreat", price: 60.00, materials: "Cotton", Dimensions: "30x42x20", Volume: "20L", Weight: "2kg" },
+      { imageurl: "images/bags/razer.jpg", title: "Razer Rouge Backpack 13", description: "God for collage and hauling around a loptop", color: "Black", bag: "Razer Rouge", price: 110.00, materials: "Recycled Plastic", Dimensions: "32x39x10", Volume: "17L", Weight: "3kg" },
+      { imageurl: "images/bags/steelseries.png", color: "Black", title: "Targus X Steelseries Sniper 17.3", description: "Good for collage and everyday use also good for gaming events.", bag: "Steelseries Sniper", price: 99.99, materials: "Nylon", Dimensions: "35x33x55", Volume: "26L", Weight: "2kg" }];
+      // this is to check if there are matching back and if so not to display them
+      var matchingBag = null;
+      bags.forEach(bag => {
+        if (bag.bag == bagName) {
+          matchingBag = bag;
+        }
+      });
+      return matchingBag;
+    }
+
+  </script>
+
+  </html>

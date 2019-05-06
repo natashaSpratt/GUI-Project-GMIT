@@ -1,0 +1,312 @@
+<DOCTYPE! html>
+    <html lang="en">
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="myStyle.css" />
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!--Font Awesome link-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+            integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <title>Bags</title>
+        <style>
+            #down {
+                margin-top: 100px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- Nav Bar  -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="index.html">Home Page</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Nav Bar Collapse menu -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <!-- Nav Bar  dropdown Menu for products -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Shop</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="Clothing.html">Clothing</a>
+                            <a class="dropdown-item" href="Bags.html">Bags</a>
+                            <a class="dropdown-item" href="accerssories.html">Accessories</a>
+                        </div>
+                    </li>
+                    <!--Navbar link to Cart -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html"><i class="fas fa-shopping-basket"></i> Cart</a>
+                    </li>
+                </ul>
+
+
+                <!--Login button -->
+                <button type="button my-4 my-lg-0" class="btn btn-primary" data-toggle="modal"
+                    data-target="#loginModal"><i class="fas fa-unlock"></i> Login</button>
+                <!-- Modal for login button-->
+                <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="loginModalLabel"><b>Login</b></h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <form class="form-inline my-2 my-lg-0">
+                                <input class="form-control mr-sm-2" type="search" placeholder="Search"
+                                    aria-label="Search">
+                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                            </form>
+                        </div>
+        </nav>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+
+        <!-- <div class="col-25">
+        </div> -->
+        </div>
+        <div class="container">
+            <div class="card">
+                <div class="card-body">
+
+
+                    <div input="text">
+                        <form>
+                            <fieldset>
+                                <!-- here is where you enter your address for the items to be delivered -->
+                                <input id="session-save" type="text" name="Enter Address" size="20" maxlength="16"
+                                    placeholder="Enter Street Address">Enter Street Address.
+                                <br>
+                                <br>
+                                <input id="session-save" type="text" name="Enter Address" size="20" maxlength="16"
+                                    placeholder="Town">Town.
+                                <br>
+                                <br>
+                                <input id="session-save" type="text" name="Enter Address" size="20" maxlength="16"
+                                    placeholder="County">County.
+                                <br>
+                                <br>
+                                <input id="session-save" type="text" name="Enter Address" size="20" maxlength="16"
+                                    placeholder="Post Code">Post Code.
+                                <br>
+                                <br>
+                                <input id="session-save" type="text" name="Enter Address" size="20" maxlength="16"
+                                    placeholder="Country">Country.
+                                <br>
+                                <br>
+
+                                <legend><i>Enter Details</i></legend>
+                                <!-- images to select your bank card provider -->
+                                <label><br><input id="session-save" type="radio" name="Credit Card Type" value="visa"
+                                        checked><input type="image" src="images/visa.jpg" width="40" height="20"
+                                        Visa<br>
+                                </label>
+                                <label><br><input id="session-save" type="radio" name="Credit Card Type"
+                                        value="visa debit"><input type="image" src="images/visadebit.jpg" width="40"
+                                        height="20" Visa debit<br>
+                                </label>
+                                <label><br><input id="session-save" type="radio" name="Credit Card Type"
+                                        value="MasterCard"><input type="image" src="images/mastercard.jpg" width="40"
+                                        height="20" MasterCard<br>
+                                </label>
+                                <label><br><input id="session-save" type="radio" name="Credit Card Type"
+                                        value="American Express"><input type="image" src="images/americanexpress.jpg"
+                                        width="40" height="20" American Express<br>
+                                </label>
+
+                                <br><input type="text" name="Credit Card Number" size="20" maxlength="16">Credit
+                                Card Number.<br><br><input type="text" name="CVV Number" size="5" maxlength="3">CVV
+                                Number.
+
+                                <br>Expiry Year
+                                <!-- year and month selecters for the bank card -->
+                                <select>
+                                    <option value="2018">2018</option>
+                                    <option value="2019">2019</option>
+                                    <option value="2020">2020</option>
+                                    <option value="2021">2021</option>
+                                    <option value="2022">2022</option>
+                                    <option value="2023">2023</option>
+                                    <option value="2024">2024</option>
+                                </select>
+                                <br><br>
+                                Expiry Month
+                                <select>
+                                    <option value="01">Jan</option>
+                                    <option value="02">Feb</option>
+                                    <option value="03">Mar</option>
+                                    <option value="04">Apr</option>
+                                    <option value="05">May</option>
+                                    <option value="06">June</option>
+                                    <option value="07">July</option>
+                                    <option value="08">Aug</option>
+                                    <option value="09">Sep</option>
+                                    <option value="10">Oct</option>
+                                    <option value="11">Nov</option>
+                                    <option value="12">Dec</option>
+                                </select>
+                            </fieldset>
+                        </form>
+                        <button type="button my-4 my-lg-0" class="btn btn-primary"
+                            onclick="sessionSave();">Checkout</button>
+                    </div>
+                    <div id="test-cards"></div>
+                    <div id="cartTotalPrice" style="float:right"></div>
+                    <!-- this button is used to clear the cart and the localStorage -->
+                    <button onclick="emptyCart();" type="button my-4 my-lg-0" class="btn btn-primary"
+                        style="margin-top:20px;">Empty
+                        Cart</button>
+                    <div id="totalPrice"></div>
+                </div>
+            </div>
+
+    </body>
+
+    </html>
+    <script>
+        //calling the functions for the cart 
+        createCards();
+        calculationForCartPrice();
+
+        //putting putting the body together 
+        function createItemCard(item) {
+            var card = document.createElement('div');
+            card.classList.add('card');
+            //add image to div
+            var image = createImage(item.product.imageurl)
+            card.appendChild(image);
+            //add card body
+            var cardBody = createCardBody(item);
+            card.style.width = "200px";
+            card.appendChild(cardBody);
+            return card;
+        }
+
+        //getting the image to the body of the cart 
+        function createImage(imageurl) {
+            var image = document.createElement('img');
+            image.setAttribute('src', imageurl);
+            image.setAttribute('alt', "Responsive image");
+            image.setAttribute('style', "width:150px; height:150px;");
+            image.classList.add('img-fluid');
+
+            return image;
+        }
+
+        //body for items going into the cart
+        function createCardBody(item) {
+            //create div 
+            let body = document.createElement('div');
+            body.classList.add("fred-this-is-the-body");
+            //styling the div
+            body.style.fontWeight = "bold";
+
+            var titleParagraph = createTitle(item.product.title);
+            body.appendChild(titleParagraph);
+
+            var descriptionParagraph = createParagraph(item.product.description);
+            body.appendChild(descriptionParagraph);
+
+            var itemCost = item.product.price * item.quantity;
+            var pricePara = createPrice(itemCost, item.quantity);
+            body.appendChild(pricePara);
+
+            var x = document.createElement("INPUT");
+            x.setAttribute("type", "text");
+            return body;
+        }
+
+        //this function is for creating the text for the items
+        function createParagraph(specText) {
+            let para = document.createElement('p');
+            para.innerHTML = specText;
+
+            return para;
+        }
+
+        //title for the items in the cart
+        function createTitle(specText) {
+            let para = document.createElement('p');
+            para.style.fontWeight = "bold";
+            para.innerHTML = specText;
+
+            return para;
+        }
+
+        //printing the price back to the cart
+        function createPrice(itemCost, quantity) {
+            let para = document.createElement('p');
+            //para
+            para.innerHTML = "Unit price: €" + itemCost + "<br> Quantity: x" + quantity;
+
+            return para;
+        }
+
+        // creating card for the cart
+        function createCards() {
+            var items = JSON.parse(localStorage.getItem("cart-items"));
+            if (items != null) {
+                for (let index = 0; index < items.length; index++) {
+                    const item = items[index];
+                    var card;
+                    if (typeof item.product !== 'undefined') {
+                        card = createItemCard(item);
+                        document.getElementById("test-cards").appendChild(card);
+                    }
+                }
+            }
+
+        }
+
+        //getting the price for each item
+        function calculationForCartPrice() {
+            var cartItems = JSON.parse(localStorage.getItem("cart-items"));
+            var matchingBag = null;
+            var totalPrice = 0;
+            for (var i = 0; i < cartItems.length; i++) {
+                var cartItem = cartItems[i];
+                totalPrice = totalPrice + (cartItem.product.price * cartItem.quantity);
+            }
+            document.getElementById("cartTotalPrice").innerHTML = "Cart Total: €" + totalPrice.toFixed(2);
+            return totalPrice;
+        }
+        // button for clearing the cart
+        function emptyCart() {
+            localStorage.clear();
+            var cart;
+            if (cart == localStorage.clear()) {
+                alert("Cart is now empty!");
+            }
+            else {
+
+            }
+        }
+        // session storage for the card details
+        function sessionSave() {
+            sessionStorage.name = document.getElementById("session-save").value;
+        }
+    </script>

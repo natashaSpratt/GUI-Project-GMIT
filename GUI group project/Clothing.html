@@ -1,0 +1,301 @@
+<doctype html>
+  <html lang="en">
+
+
+  <head>
+    
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--Font Awesome link-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <title>Bags</title>
+
+  </head>
+
+  <body>
+    <!-- Nav Bar  -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="index.html">Home Page</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Nav Bar Collapse menu -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <!-- Nav Bar  dropdown Menu for products -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Shop</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="Clothing.html">Clothing</a>
+              <a class="dropdown-item" href="Bags.html">Bags</a>
+              <a class="dropdown-item" href="accerssories.html">Accessories</a>
+            </div>
+          </li>
+          <!--Navbar link to Cart -->
+          <li class="nav-item">
+            <a class="nav-link" href="cart.html"><i class="fas fa-shopping-basket"></i> Cart</a>
+          </li>
+        </ul>
+
+
+        <!--Login button -->
+        <button type="button my-4 my-lg-0" class="btn btn-primary" data-toggle="modal" data-target="#loginModal"><i
+            class="fas fa-unlock"></i> Login</button>
+        <!-- Modal for login button-->
+        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="loginModalLabel"><b>Login</b></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form>
+            </div>
+    </nav>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"></script>
+
+    <div class="container">
+      <div id="test-cards"></div>
+      <div id="main"></div>
+      <div class="card-group">
+        <!-- card 1 of row 1  cards need price and names added-->
+        <div class="card">
+          <img src="images/clothes/camocoat.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">North Face Raincoat</h5>
+            <p class="card-text">€150.00</p>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+              content. This content is a little bit longer.</p>
+          </div>
+          <div class="card-footer">
+            Quantity: <input id="ClothingInputAmount1"><button type="button my-4 my-lg-0" class="btn btn-primary"
+              onclick="userAddCartClick('Northface Raincoat',document.getElementById('ClothingInputAmount1').value);">Add
+              to
+              cart</button>
+          </div>
+        </div>
+        <!-- card 2 of row 1 -->
+        <div class="card">
+          <img src="images/clothes/jackgrassland.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Jack Wolfskin Grassland Raincoat</h5>
+            <p class="card-text">€110.00</p>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+          </div>
+          <div class="card-footer">
+            Quantity: <input id="ClothingInputAmount2"><button type="button my-4 my-lg-0" class="btn btn-primary"
+              onclick="userAddCartClick('Jack Wolfskin Grassland Raincoat',document.getElementById('ClothingInputAmount2').value);">Add
+              to
+              cart</button>
+          </div>
+        </div>
+        <!-- card 3 of row 1 -->
+        <div class="card">
+          <img src="images/clothes/jackpinecreek.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Jack Wolfskin Pinecreek Raincoat</h5>
+            <p class="card-text">€90.00</p>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+              content. This card has even longer content than the first to show that equal height action.</p>
+          </div>
+          <div class="card-footer">
+            Quantity: <input id="ClothingInputAmount3"><button type="button my-4 my-lg-0" class="btn btn-primary"
+              onclick="userAddCartClick('Jack Wolfskin Pinecreek Raincoat',document.getElementById('ClothingInputAmount3').value);">Add
+              to
+              cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="card-group">
+        <!-- card 1 of row 2 -->
+        <div class="card">
+          <img src="images/clothes/regattafleece.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Regtta Fleece</h5>
+            <p class="card-text">€50.00</p>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+              content. This content is a little bit longer.</p>
+          </div>
+          <div class="card-footer">
+            Quantity: <input id="ClothingInputAmount4"><button type="button my-4 my-lg-0" class="btn btn-primary"
+              onclick="userAddCartClick('Regtta Fleece',document.getElementById('ClothingInputAmount4').value);">Add to
+              cart</button>
+          </div>
+        </div>
+        <!-- card 2 of row 2 -->
+        <div class="card">
+          <img src="images/clothes/mountainequip.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Mountain Equipment Fleece</h5>
+            <p class="card-text">€65.00</p>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+          </div>
+          <div class="card-footer">
+            Quantity: <input id="ClothingInputAmount5"><button type="button my-4 my-lg-0" class="btn btn-primary"
+              onclick="userAddCartClick('Mountain Equipment Fleece',document.getElementById('ClothingInputAmount5').value);">Add
+              to
+              cart</button>
+          </div>
+        </div>
+        <!-- card 3 of row 2 -->
+        <div class="card">
+          <img src="images/clothes/columbiafleece.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Columbia Fleece</h5>
+            <p class="card-text">€75.00</p>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+              content. This card has even longer content than the first to show that equal height action.</p>
+          </div>
+          <div class="card-footer">
+            Quantity: <input id="ClothingInputAmount6"><button type="button my-4 my-lg-0" class="btn btn-primary"
+              onclick="userAddCartClick('Columbia Fleece',document.getElementById('ClothingInputAmount6').value);">Add
+              to
+              cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- row 3 -->
+    <div class="container">
+      <div class="card-group">
+        <!-- card 1 of row 3 -->
+        <div class="card">
+          <img src="images/clothes/berghaus.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Berghaus Waterproof Pants</h5>
+            <p class="card-text">€90.00</p>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+              content. This content is a little bit longer.</p>
+          </div>
+          <div class="card-footer">
+            Quantity: <input id="ClothingInputAmount7"><button type="button my-4 my-lg-0" class="btn btn-primary"
+              onclick="userAddCartClick('Berghaus Waterproof Pants',document.getElementById('ClothingInputAmount7').value);">Add
+              to
+              cart</button>
+          </div>
+        </div>
+        <!-- card 2 of row 3 -->
+        <div class="card">
+          <img src="images/clothes/northfaceventure.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Northface Waterproof Pants</h5>
+            <p class="card-text">€110.00</p>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+          </div>
+          <div class="card-footer">
+            Quantity: <input id="ClothingInputAmount8"><button type="button my-4 my-lg-0" class="btn btn-primary"
+              onclick="userAddCartClick('Northface Waterproof Pants',document.getElementById('ClothingInputAmount8').value);">Add
+              to
+              cart</button>
+          </div>
+        </div>
+        <!-- card 3 of row 3 -->
+        <div class="card">
+          <img src="images/clothes/spraywayhydro.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Sprayway Waterproof Pants</h5>
+            <p class="card-text">€80.00</p>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+              content. This card has even longer content than the first to show that equal height action.</p>
+          </div>
+          <div class="card-footer">
+            Quantity: <input id="ClothingInputAmount9"><button type="button my-4 my-lg-0" class="btn btn-primary"
+              onclick="userAddCartClick('Sprayway Waterproof Pants',document.getElementById('ClothingInputAmount9').value);">Add
+              to
+              cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+
+    function userAddCartClick(clothingName, quantity) {
+      var clothing = findClothingFromArray(clothingName);
+      addToCart(clothing, quantity);
+    }
+
+    function addToCart(product, quantity) {
+      // duplicates
+      var item = { product: product, quantity: quantity };
+      var cartItems = [];
+      var storageItemsString = localStorage.getItem("cart-items");
+      var storageItems = JSON.parse(storageItemsString);
+      if (storageItems != null) {
+        cartItems = storageItems;
+      }
+
+      if (cartItems != null) {
+        if (!duplicateFound(cartItems, item)) {
+          cartItems.push(item);
+          localStorage.setItem("cart-items", JSON.stringify(cartItems));
+        }
+      }
+    }
+
+    // checking if there is a duplicate and if so to add it to a counter and converters it into and int instead of a string
+    function duplicateFound(cartItems, item) {
+      //loop thought each cartItems
+      for (var i = 0; i < cartItems.length; i++) {
+        var cartItem = cartItems[i];
+        if (cartItem.product.clothing === item.product.clothing) {
+          cartItem.quantity = parseInt(cartItem.quantity) + parseInt(item.quantity);
+          localStorage.setItem("cart-items", JSON.stringify(cartItems));
+          return true;
+        }
+      }
+      return false;
+    }
+
+    function findClothingFromArray(clothingName) {
+      var clothes = [{ imageurl: "images/clothes/camocoat.jpg", title: "North Face Raincoat", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit,", color: "Desert Camo", clothing: "Northface Raincoat", price: 150.00, materials: "Nylon Pack Cloth" },
+      { imageurl: "images/clothes/jackgrassland.jpg", title: "Jack Wolfskin Grassland Raincoat", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit,", color: "BLue", clothing: "Jack Wolfskin Grassland Raincoat", price: 110.00, materials: "Recycled Yarn" },
+      { imageurl: "images/clothes/jackpinecreek.jpg", title: "Jack Wolfskin Pinecreek Raincoat", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit,", color: "Grey", clothing: "Jack Wolfskin Pinecreek Raincoat", price: 90.00, materials: "Polyester" },
+      { imageurl: "images/clothes/regattafleece.jpg", title: "Regtta Fleece", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit,", color: "Blue", clothing: "Regtta Fleece", price: 50.00, materials: "Softshell" },
+      { imageurl: "images/clothes/mountainequip.jpg", title: "Mountain Equipment Fleece", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit,", color: "Charcoal Grey", clothing: "Mountain Equipment Fleece", price: 65.00, materials: "Leather" },
+      { imageurl: "images/clothes/columbiafleece.jpg", title: "Columbia Fleece", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit,", color: "Wine", clothing: "Columbia Fleece", price: 75.00, materials: "Cotton" },
+      { imageurl: "images/clothes/berghaus.jpg", title: "Berghaus Waterproof Pants", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit,", color: "Black", clothing: "Berghaus Waterproof Pants", price: 90.00, materials: "Cotton" },
+      { imageurl: "images/bags/northfaceventure.jpg", title: "Northface Waterproof Pants", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit,", color: "Black", clothing: "Northface Waterproof Pants", price: 110.00, materials: "Recycled Plastic" },
+      { imageurl: "images/bags/spraywayhydro.jpg", title: "Sprayway Waterproof Pants", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit,", color: "Black", bag: "Sprayway Waterproof Pants", price: 80.00, materials: "Nylon", }];
+      var matchingClothing = null;
+      clothes.forEach(clothing => {
+        if (clothing.clothing == clothingName) {
+          matchingClothing = clothing;
+        }
+      });
+      return matchingClothing;
+    }
+
+  </script>
+
+  </html>
